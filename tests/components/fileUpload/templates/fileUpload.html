@@ -1,0 +1,19 @@
+<div data-bind="with:myFile">
+    <div class="file-wrapper" id="file-wrapper-test" data-bind="css:{completed:isCompleted}">
+        <input id="testFile" type="file" class="input-file" data-bind="fileValue: $data,attr:{title:name}" />
+        <input id="test" class="hide" data-bind="validationOptions: {insertMessages:false}, value: name" />
+
+        <label data-for="fileUploadInput" class="file-label text-field" data-bind="css:{'icon-pending': isPending},validationElement:name">
+            <span class="file-name" data-bind="text:name"></span>
+        </label>
+
+        <i class="icon-attach noPrint" data-bind="visible:isNotSet"></i>
+        <div class="pending-div" data-bind="visible:isPending">
+
+            <span data-bind="text:progress()+'%'" class="progress"></span>
+        </div>
+        <i class="noPrint icon-trush" data-bind="click:removeFile,visible:isRemoveActive"></i>
+        <span data-bind="text:displaySize" class="file-size"></span>
+    </div>
+
+</div>

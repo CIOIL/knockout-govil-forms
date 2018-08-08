@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="col-md-12 required-wrapper" data-bind="requiredWrapper: idType">
+        <label id="IdType" data-for="[#IdType]"><span data-bind="text: labels().idType"></span></label>
+        <div class="radio radiogroupContainer " role="radiogroup" aria-labelledby="IdType">
+            <div class="inline-element">
+                <input class="tfsInputradio" id="[#IdType]1"
+                       type="radio" name="[#IdType]" value="1" data-bind="checked: idType, radioGroupAccessibility: idType" tfsdata />
+                <label for="[#IdType]1" class="label-radio-combined">
+                    <span data-bind="text: labels().idType1"></span>
+                </label>
+            </div>
+            <div class="inline-element">
+                <input class="tfsInputradio" id="[#IdType]2"
+                       type="radio" name="[#IdType]" value="2" data-bind="checked: idType, radioGroupAccessibility: idType" tfsdata />
+                <label for="[#IdType]2" class="label-radio-combined">
+                    <span data-bind="text: labels().idType2"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tfstexttoreplace="{IdNum:[#IdNum],LastName:[#LastName],FirstName:[#FirstName]}"
+     tfsinclude="CDN/builder/src/components/groups/personalInformation/PersonalInformation.html"></div>
+
+

@@ -1,0 +1,45 @@
+﻿<ul class="help-and-info-list">
+    <li>
+        <!-- Date and Reference -->
+        <div class="list-title help-menue-title"><div role="heading" aria-level="3"><span data-bind="text: resources.labels().formDetails"></span></div></div>
+    </li>
+    <li class="content-details">
+        <p class="referenceNumber">
+            <span data-bind="text: resources.labels().referenceNum"></span>:
+            <span class="TitleLock" data-bind="text: referenceNumber"></span>
+        </p>
+        <p class="date">
+            <span data-bind="text: resources.labels().date"></span>:
+            <span class="TitleLock" id="Date" data-bind="text: loadingDate"  ></span>
+        </p>
+    </li>
+    <li>
+        <div class="list-title"><div><span data-bind="text: resources.labels().about"></span></div></div>
+    </li>
+    <li class="about-content content-details">
+        <p>
+            <span data-bind="text: resources.labels().formVersion"></span>
+            <span data-bind="text: formVersion"></span>
+        </p>
+    </li>
+
+    <li class="splash-page content-details">
+        <p data-bind="text: resources.labels().splashPageText"></p>
+        <input type="button" id="continuebutton"
+               data-bind="attr: { title: resources.labels().startTitle}, value: resources.labels().start"
+               class="btn btn-white" />
+    </li>
+    <li>
+        <div class="list-title" role="heading" aria-level="3"><div><span data-bind="text: feedback.texts().feedback"></span></div></div>
+    </li>
+    <li class="feedback">
+
+        <div class="item"></div>
+        <p><span data-bind="text: feedback.texts().fillQuestion"></span></p>
+        <div  data-bind="with:feedback" tfsinclude="CDN/builder/src/components/feedback/feedbackGovForms.html"></div>
+
+        <input type="button" id="btnClose"
+               data-bind="attr: { title: resources.labels().close}, value: resources.labels().close, click: function(){$parent.toggleInformationMenue()}"
+               class="btn btn-blue float-left btn-help-close" />
+    </li>
+</ul>

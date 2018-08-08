@@ -1,0 +1,13 @@
+﻿
+<!-- ko foreach:columnsFilterControls-->
+<label for="filterElement">סנן על פי <span data-bind="text:controlTitle"></span></label>
+<!-- ko if:isSelect -->
+<select id="filterElement" class="tfsInputSelect"  data-bind="value:filteredValue,options: options, optionsValue: 'dataCode', optionsText: 'dataText'"></select>
+<!-- /ko -->
+<!-- ko if:isInput -->
+<input id="filterElement" class="tfsInputText " data-bind="value:filteredValue" />
+<!-- /ko -->
+<!-- ko if:isDate -->
+<input id="filterElement" class="tfsInputDate " data-bind="value:filteredValue" />
+<!-- /ko -->
+<!-- /ko -->

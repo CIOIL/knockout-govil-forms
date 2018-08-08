@@ -1,0 +1,106 @@
+﻿<div class="noPrint" tfsinclude="CDN/builder/src/components/inlinePopup/inlinePopup.html"></div>
+<template id="save-service-template">
+    <div class="options-screen meassage-content" data-bind="visible: viewSelectOption">
+
+        <button type="button" data-bind="click: cancelSave" class="close-button" title="Close">
+            <span></span>
+        </button>
+        <div class="save-form-title">
+            <span class="title" data-bind="text: labels().saveFormTitle">שמירה</span>
+        </div>
+        <div class="wrapper options-screen-wrapper">
+            <div class="message">
+                <span data-bind="text: labels().notice">קישור לשירות ששמרתם ישלח אליכם מיד</span>
+                <span class="bold-text" data-bind="text: labels().selectOption">בחרו את הדרך בה תרצו לקבל את הקישור:</span>
+            </div>
+            <div class="buttons-container">
+                <a class="save-button" id="byEmail" data-bind="click: function() { updateStep('byEmail') }" role="button" href="#">
+                    <i class="save-icon email" aria-hidden="true"></i>
+                    <span data-bind="text: labels().inEmail">בדואר אלקטרוני</span>
+                </a>
+                <a class="save-button" id="bySms" data-bind="click: function() { updateStep('bySMS') }" role="button" href="#">
+                    <i class="save-icon sms" aria-hidden="true"></i>
+                    <span data-bind="text: labels().inSMS">במסרון</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="email-screen form-content" data-bind="visible: viewEmailDetails" style="display: none;">
+
+        <button type="button" data-bind="click: cancelSave" class="close-button" title="Close">
+            <span></span>
+        </button>
+        <div class="save-form-title">
+            <span class="title" data-bind="text: labels().saveByEmailTitle">קבלת קישור לשירות באמצעות דואר אלקטרוני</span>
+        </div>
+        <div class="wrapper">
+            <div class="fields">
+                <div class="field first">
+                    <label data-bind="text: labels().insertEmail" for="saveFormEmail">הזינו כתובת דואר אלקטרוני</label>
+                    <input placeholder="@" data-bind="value: email" id="saveFormEmail" maxlength="50" dir="ltr" aria-describedby="vmsg_saveFormEmail"><span aria-live="assertive" id="vmsg_saveFormEmail" class="validationMessage" style="display: none;"></span>
+                </div>
+                <div class="field second">
+                    <label data-bind="text: labels().validateEmail" for="saveFormEmailValidaion">אמתו את כתובת הדואר האלקטרוני</label>
+                    <input placeholder="@" id="saveFormEmailValidaion" data-bind="event: { paste: pasted  }, attr:{'placeholder': '@'}, value: emailValidation" maxlength="50" dir="ltr" aria-describedby="vmsg_saveFormEmailValidaion"><span aria-live="assertive" id="vmsg_saveFormEmailValidaion" class="validationMessage" style="display: none;"></span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <div class="button-wrapper">
+                    <input type="button" data-bind="value: labels().cancelButton, click:cancelSave" class="cancel-button save-button" value="ביטול">
+                </div>
+                <div class="button-wrapper">
+                    <input type="button" data-bind="value: labels().confirm, click: sendMail" class="confirm-button save-button" value="אישור">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sms-screen form-content" data-bind="visible: viewCellNumberDetails" style="display: none;">
+
+        <button type="button" data-bind="click: cancelSave" class="close-button" title="Close">
+            <span></span>
+        </button>
+        <div class="save-form-title">
+            <span class="title" data-bind="text: labels().saveBySMS">קבלת קישור לשירות באמצעות מסרון</span>
+        </div>
+        <div class="wrapper">
+            <div class="fields">
+                <div class="field  first">
+                    <label data-bind="text: labels().insertPhoneNumber" for="saveFormCellnumber">הזינו מספר טלפון נייד</label>
+                    <input data-bind="value: cellNumber" id="saveFormCellnumber" maxlength="11" aria-describedby="vmsg_saveFormCellnumber"><span aria-live="assertive" id="vmsg_saveFormCellnumber" class="validationMessage" style="display: none;"></span>
+                </div>
+                <div class="field second">
+                    <label data-bind="text: labels().validatePhoneNumber" for="saveFormEmailValidaion">אמתו את מספר הטלפון הנייד</label>
+                    <input id="saveFormCellNumberValidaion" data-bind="event: { paste: pasted  }, value: cellNumberValidation" maxlength="11" aria-describedby="vmsg_saveFormCellNumberValidaion"><span aria-live="assertive" id="vmsg_saveFormCellNumberValidaion" class="validationMessage" style="display: none;"></span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <div class="button-wrapper">
+                    <input class="cancel-button save-button" type="button" data-bind="value: labels().cancelButton, click:cancelSave" value="ביטול">
+                </div>
+                <div class="button-wrapper">
+                    <input class="confirm-button save-button" type="button" data-bind="value: labels().confirm, click: sendSMS" value="אישור">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="process-end-screen meassage-content" data-bind="visible: processEnd" style="display: none;">
+        <button type="button" data-bind="click: function() { toggleSaveModal(false) }" class="close-button" title="Close">
+            <span></span>
+        </button>
+        <div class="save-form-title">
+            <span class="title" data-bind="text: labels().saveFormTitle">שמירה</span>
+        </div>
+        <div class="wrapper">
+            <div class="message">
+                <span data-bind="text: labels().formSavedNotice"></span>
+                <span class="bold-text" data-bind="text: labels().formSavedLatencyNotice"></span>
+            </div>
+            <div class="buttons-container">
+                <input class="save-button first" type="button" data-bind="value: labels().resend, click:  resend" value="לשליחה חוזרת">
+                <input class="save-button second" type="button" data-bind="value: labels().confirm, click: function() { toggleSaveModal(false) }" value="אישור">
+            </div>
+
+        </div>
+
+    </div>
+</template>

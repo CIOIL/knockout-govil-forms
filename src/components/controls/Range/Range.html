@@ -1,0 +1,12 @@
+﻿<div class="range" role="radiogroup" data-bind="ariaLabelForRangeGroup: true">
+    <div class="required-range">
+        <div data-bind="foreach:valuesArray ">
+            <div>
+                <button id="rangeId" class="step" role="radio"
+                    data-bind="html:$data, click: $parent.setSelectedValue,css: { checked: $parent.isSelected($data)},style:{ width:$parent.stepWidth()},attr:{'data-toFocus':$parent.isFocus($index),'aria-label':$data,'aria-checked':$parent.isSelected($data)}"></button>
+            </div>
+        </div>
+        <input class="hide" id="[#SelectedValue]" tfsdata
+               data-bind="value: selectedValue" />
+    </div>
+</div>

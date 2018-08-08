@@ -1,0 +1,178 @@
+﻿<div id="attachment">
+    <div style="DISPLAY: none">
+        <table id="attachmentsTable" class="dtable fill-container" data-bind="with: attachmentListViewModel" tfsstaticrows="true"
+            tfsdata="">
+            <tbody data-bind="foreach: attachments">
+                <tr class="row-dtable">
+                    <td>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="attach">צרופה</label>
+                                <div class="attachment-wrapper">
+                                    <div class="attachment-inner">
+                                        <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="שם קובץ: demo.jpg" href="http://xxx/AGFormSite/#"
+                                            _title="בחר קובץ">
+                                            <input tabindex="-1" id="attach" class="tfsInputText" style="DIRECTION: rtl" data-bind="value: fileName, tlpAttachment: fileName" tfsdatatype="attachment" tfsname="צרופה" tfsrowdata="" tfsuploaded="true" placeholder="file name:demo.jpg" data-fsize="" title="file name:demo.jpg" tfsaction="displayAttachment">
+                                            <img title="file name:demo.jpg" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                                        </a>
+                                    </div>
+                                    <input onchange="AgatAttachment.handleChange(this);" id="_form_attach" class="attachment" oncontextmenu="return false;" type="file"
+                                        readonly="readonly" title="file name:demo.jpg" _title="בחר קובץ">
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br><br>
+        <div data-bind="with: sameAttachmentsViewModel">
+            <table id="sameAttachmentsTable" class="dtable fill-container" tfsstaticrows="true" tfsdata="">
+                <tbody data-bind="foreach: sameAttachmentsList">
+                    <tr class="row-dtable">
+                        <td>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="attach">צרופה</label>
+                                    <div class="attachment-wrapper">
+                                        <div class="attachment-inner">
+                                            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="שם קובץ: demo.jpg0.123Kb-גודל" href="http://xxx/AGFormSite/#"
+                                                _title="בחר קובץ"><input tabindex="-1" id="attach" class="tfsInputText" style="DIRECTION: rtl" data-bind="value: fileName, tlpAttachment: fileName" tfsdatatype="attachment" tfsname="צרופה" tfsrowdata="" tfsuploaded="true" placeholder="file name:demo.jpg" data-fsize="123" title="file name:demo.jpg" tfsaction="displayAttachment"><img title="file name:demo.jpg" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif"></a>
+                                        </div><input onchange="AgatAttachment.handleChange(this);" id="_form_attach" class="attachment"
+                                            oncontextmenu="return false;" type="file" readonly="readonly" title="file name:demo.jpg"
+                                            _title="בחר קובץ">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><br><br>
+            <table id="differentAttachmentsTable" class="dtable fill-container" tfsstaticrows="true" tfsdata="">
+                <tbody data-bind="foreach: differentAttachmentsList">
+                    <tr class="row-dtable">
+                        <td>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="attach">צרופה</label>
+                                    <div class="attachment-wrapper">
+                                        <div class="attachment-inner">
+                                            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="שם קובץ: demo.jpg0.456Kb-גודל" href="http://localhost/AGFormSite/#"
+                                                _title="בחר קובץ"><input tabindex="-1" id="attach" class="tfsInputText" style="DIRECTION: rtl" data-bind="value: fileName, tlpAttachment: fileName" tfsdatatype="attachment" tfsname="צרופה" tfsrowdata="" tfsuploaded="true" placeholder="file name:demo.jpg" data-fsize="456" title="file name:demo.jpg" tfsaction="displayAttachment"><img title="file name:demo.jpg" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif"></a>
+                                        </div><input onchange="AgatAttachment.handleChange(this);" id="_form_attach" class="attachment"
+                                            oncontextmenu="return false;" type="file" readonly="readonly" title="file name:demo.jpg"
+                                            _title="בחר קובץ">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><br><br>
+
+            <div class="row">
+                <div class="col-md-4" data-bind="with: attachment">
+                    <label>צרופה שהערך שלה משתנה בגלל attribute של צרופות זהות</label>
+                    <div class="attachment-wrapper">
+                        <div class="attachment-inner">
+                            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="שם קובץ: demo (1).jpg" href="http://xxx/AGFormSite/#"
+                                _title="בחר קובץ">
+                            <input tabindex="-1" id="attachmentWithAttribute" class="tfsInputText" style="DIRECTION: rtl" data-bind="
+                        tlpAttachment: fileName,
+                        value: fileName" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="true" placeholder="file name:demo (1).jpg" data-fsize="123" title="file name:demo (1).jpg" tfsaction="displayAttachment"><img title="file name:demo (1).jpg" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                        </a>
+                        </div><input onchange="AgatAttachment.handleChange(this);" id="_form_attachmentWithAttribute" class="attachment"
+                            oncontextmenu="return false;" type="file" readonly="readonly" title="file name:demo (1).jpg" _title="בחר קובץ">
+                    </div>
+                </div>
+            </div><br>
+        </div>
+        <div>
+            <div class="attachment-wrapper">
+                <div class="attachment-inner">
+                    <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://xxx/AGFormSite/#">
+                        <input tabindex="-1" id="invalidValueAccessor" class="tfsInputText" style="DIRECTION: rtl" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="false" placeholder="בחר קובץ">
+                        <img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                    </a>
+                </div>
+                <input onchange="AgatAttachment.handleChange(this);" id="_form_invalidValueAccessor" class="attachment" oncontextmenu="return false;"
+                    type="file">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="attachmentForMobile"></label>
+
+                <div class="attachment-wrapper">
+                    <div class="attachment-inner">
+                        <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://xxx/AGFormSite/#">
+                            <input tabindex="-1" id="attachmentForMobile" class="tfsInputText" style="DIRECTION: rtl" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsextensions="*.jpg" tfsuploaded="true" placeholder="file name:demo (1).jpg" tfsmaxfilesize="5120" title="file name:demo (1).jpg" tfsaction="displayAttachment" data-fsize=""><img title="file name:demo (1).jpg" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                        </a>
+                    </div>
+                    <input onchange="AgatAttachment.handleChange(this);" id="_form_attachmentForMobile" class="attachment" oncontextmenu="return false;"
+                        type="file" readonly="readonly" title="file name:demo (1).jpg" _title="select file">
+                </div>
+            </div>
+            <div>
+                <label for="attachmentWithOutTfsextensions"></label>
+                <div class="attachment-wrapper">
+                    <div class="attachment-inner">
+                        <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://localhost/AGFormSite/#">
+                            <input tabindex="-1" id="attachmentWithOutTfsextensions" class="tfsInputText" style="DIRECTION: rtl" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="true" placeholder="file name:demo (1).jpg" tfsmaxfilesize="5120" title="file name:demo (1).jpg" tfsaction="displayAttachment"><img title="file name:demo (1).jpg" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                        </a>
+                    </div>
+                    <input onchange="AgatAttachment.handleChange(this);" id="_form_attachmentWithOutTfsextensions" class="attachment" oncontextmenu="return false;"
+                        type="file" readonly="readonly" title="file name:demo (1).jpg" _title="select file">
+                </div>
+            </div>
+        </div>
+        <div data-bind="with: disableAttachment">
+            <label>צרופה מאופשרת על ידי const</label>
+            <div class="attachment-wrapper">
+                <div class="attachment-inner">
+                    <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://xxx/AGFormSite/#">
+                        <input tabindex="-1" id="enabledAttachmentByConst" class="tfsInputText" style="DIRECTION: rtl" data-bind="
+                        tlpEnableAttachment: 'True'" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="false" placeholder="בחר קובץ"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                    </a>
+                </div><input onchange="AgatAttachment.handleChange(this);" id="_form_enabledAttachmentByConst" class="attachment"
+                    oncontextmenu="return false;" type="file">
+            </div><br><label>צרופה מאופשרת באמצעות observable</label>
+            <div class="attachment-wrapper">
+                <div class="attachment-inner">
+                    <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://xxx/AGFormSite/#">
+                        <input tabindex="-1" id="enabledAttachment" class="tfsInputText" style="DIRECTION: rtl" data-bind="
+                        tlpEnableAttachment: enabledAttachment()" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="false" placeholder="בחר קובץ"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                    </a>
+                </div><input onchange="AgatAttachment.handleChange(this);" id="_form_enabledAttachment" class="attachment"
+                    oncontextmenu="return false;" type="file">
+            </div><br><label>צרופה לא מאופשרת באמצעות observable</label>
+            <div class="attachment-wrapper" disabled="disabled">
+                <div class="attachment-inner">
+                    <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://xxx/AGFormSite/#">
+                        <input tabindex="-1" id="disabledAttachment" class="tfsInputText" style="DIRECTION: rtl" data-bind="
+                        tlpEnableAttachment: disabledAttachment" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="false" placeholder="בחר קובץ" disabled="disabled"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                    </a>
+                </div><input onchange="AgatAttachment.handleChange(this);" id="_form_disabledAttachment" class="attachment"
+                    oncontextmenu="return false;" type="file">
+            </div><br><label>צרופה לא מאופשרת באמצעות פונקציה</label>
+            <div class="attachment-wrapper" disabled="disabled">
+                <div class="attachment-inner">
+                    <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://xxx/AGFormSite/#">
+                        <input tabindex="-1" id="disableAttachmentByFunction" class="tfsInputText" style="DIRECTION: rtl" data-bind="
+                        tlpEnableAttachment: disableAttachmentFunction" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="false" placeholder="בחר קובץ" disabled="disabled"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                    </a>
+                </div><input onchange="AgatAttachment.handleChange(this);" id="_form_disableAttachmentByFunction" class="attachment"
+                    oncontextmenu="return false;" type="file">
+            </div><br><label>צרופה לא מאופשרת באמצעות פונקציה שמחזירה undefined</label>
+            <div class="attachment-wrapper" disabled="disabled">
+                <div class="attachment-inner">
+                    <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://xxx/AGFormSite/#">
+                        <input tabindex="-1" id="disableAttachmentByUndefined" class="tfsInputText" style="DIRECTION: rtl" data-bind="
+                     tlpEnableAttachment: undefinedFunction()" tfsdata="" tfsdatatype="attachment" tfsname="צרופה" tfsuploaded="false" placeholder="בחר קובץ" disabled="disabled"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                    </a>
+                </div><input onchange="AgatAttachment.handleChange(this);" id="_form_disableAttachmentByUndefined" class="attachment"
+                    oncontextmenu="return false;" type="file">
+            </div>
+            <!--</div>-->
+        </div>
+    </div>
+</div>

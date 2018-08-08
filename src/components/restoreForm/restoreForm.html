@@ -1,0 +1,31 @@
+﻿<div class="restore-form" data-bind="visible:visibleRestoreFormContainer">
+    <div class="restore-form-title">
+        <div class="icon"></div>
+        <div data-bind="text: labels().restoreFormTitle"></div>
+    </div>
+    <div class="border-style"></div>
+    <div class="content">
+        <div class="describe-action-text">
+            <span class="has-padding" data-bind="text: labels().subTitle"></span>
+            <div class="has-padding">
+                <span data-bind="text: labels().secondSubTitle"></span>
+                <span data-bind="text: formName"></span>
+            </div>
+            <span data-bind="text: labels().referenceNumber"></span>
+            <span class="form-reference-number" data-bind="text: referenceNumber"></span>
+        </div>
+        <div class="code-insert">
+            <span data-bind="text: labels().codeInstruction"></span>
+            <input data-bind="value: code" type="password" />
+        </div>
+        <div class="buttons-container">
+            <button class="submit-button" data-bind="click: restoreFormProcess,text: labels().approveButton"></button>
+        </div>
+        <div class="contact-us">
+            <div class="icon"></div>
+            <span class="phone-text" data-bind="text: labels().phoneNumber"></span>
+            <span class="phone-text" data-bind="text: supportPhone"></span>
+        </div>
+    </div>
+    
+</div>

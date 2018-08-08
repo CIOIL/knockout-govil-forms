@@ -1,0 +1,13 @@
+﻿.BoundaryLine {
+  clear: both;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px;
+  border-top: 2px solid #3d759a;
+}
+.blue {
+  color: #3d759a;
+}
+.fill-container{
+     page-break-inside: avoid;
+}

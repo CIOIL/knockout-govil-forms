@@ -1,0 +1,16 @@
+﻿    <div class="paging">
+        <div class="paging-information">
+            <span data-bind="text:pageInformation"></span>
+        </div>
+        <div class="paging-management">
+            <a class="first-last-page" href="#" data-bind="click:navigateToFirstPage, attr:{disabled: isFirst}" role="button" aria-label="למעבר לעמוד הראשון"><<</a>
+            <a href="#" data-bind="click:navigateToPrevious, attr:{disabled: isFirst}, text:textsResource().previousPage" role="button"> </a>
+            <div>
+                <ul data-bind="foreach:pageCountDisplayArray">
+                    <li aria-label="למעבר לעמוד"><a href="#" data-bind="css: { 'current-page':$parent.isCurrentIndex($data)},text:($data + 1), click:$parent.pageIndexChanged.bind($data)" role="button"></a></li>
+                </ul>
+            </div>
+            <a href="#" data-bind="click:navigateToNext, attr:{disabled: isLast}, text:textsResource().nextPage" role="button"> </a>
+            <a class="first-last-page" href="#" data-bind="click:navigateToLastPage, attr:{disabled: isLast}" role="button" aria-label="למעבר לעמוד האחרון">>></a>
+        </div>
+    </div>

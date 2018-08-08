@@ -1,0 +1,39 @@
+<div class="col-md-4">
+    <label for="input">input</label>
+    <span>tooltip</span>
+    <input id="input" />
+</div>
+
+<div class="col-md-4">
+    <label>input</label>
+    <input id="noLabelInput" />
+</div>
+
+<div class="col-md-4">
+    <label id="attach_lbl" for="attach">צרופה</label>
+    <div class="attachment-wrapper">
+        <div class="attachment-inner">
+            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="שם קובץ: demo.jpg" href="http://xxx/AGFormSite/#"
+                _title="בחר קובץ">
+                                            <input tabindex="-1" id="attach" class="tfsInputText" style="DIRECTION: rtl" data-bind="value: fileName, tlpAttachment: fileName" tfsdatatype="attachment" tfsname="צרופה" tfsrowdata="" tfsuploaded="true" placeholder="file name:demo.jpg" data-fsize="" title="file name:demo.jpg" tfsaction="displayAttachment">
+                                            <img title="file name:demo.jpg" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                                        </a>
+        </div>
+        <input onchange="AgatAttachment.handleChange(this);" id="_form_attach" class="attachment" oncontextmenu="return false;" type="file"
+            readonly="readonly" title="file name:demo.jpg" _title="בחר קובץ">
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="select" aria-describedby="vmsg_">
+        <label id="lookup_lbl" for="lookup">lookup</label>
+        <select class="tfsInputCombo" id="pickUp_userCity" style="DISPLAY: none" tfsdatatype="LookUpWindow" placeholder="בחר עיר מגורים"></select>
+        <input class="tfsInputCombo lookup-input lookup-input-override" id="lookup" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)"
+            onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text" tfsdata="" data-bind="tlpLookUp:{ value: value,bindOnSelect:{lookupOptions:citylist}},tlpBindList: bindCityListSettings"
+            placeholder="" tfsvalue="-1" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none"><input class="lookup-arrow lookup-arrow-override"
+            id="arrow_userCity" style="BACKGROUND-IMAGE: url(/publicForms/globalData/GetSequenceDev/WebResource.axd?d=ZLYK9w5x4nARlLpGsyYr3w8ow0haiHbNAZxPReqffESOsgqx8Nt-Kd5jiW1-pE4zQYlcAwDgKyez9JpU_cRfDw7B4sdAdMYEO7QK5f0rIj_KDSdu_pHGf_CF9lVQSo5oewNcST9wp1GAmnp812KEtHcNG4qxfRnjI65GeIOLjO2UhNy-3SxWJ4TaY-b7ZnjBnDRvU88lmdhwWNAotSY-2g2&amp;t=636333913323459404)"
+            onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false"><button title="בחר מרשימה" class="lookup-arrow lookup-arrow-override"
+            id="arrow_userCity" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false"><i class="ic-lookup-arrow" aria-hidden="true"></i></button>
+    </div><span class="loadingMessage noPrint hide">טוען נתונים...</span>
+    <span aria-live="assertive" id="vmsg_" class="validationMessage" style="display: none;"></span></div>
+</div>

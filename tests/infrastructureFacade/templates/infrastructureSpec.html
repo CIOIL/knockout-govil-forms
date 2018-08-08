@@ -1,0 +1,62 @@
+﻿<span id="GeneralAttributes"
+      tfspluginversion="3.9.0.0"
+      tfsversion="1004.0.1.6"
+      tfsprintsetup="CheckFormIntegrityBeforePrint:false;PrintBackgroundImage:true;leftMargin:15;rightMargin:15;topMargin:30;bottomMargin:10;Header:עמוד &p מתוך &P; Orientation:Portrait "
+      tfssubmitaction="submitbyhttp"
+      tfslanguage="hebrew"
+      tfsrequirederrordisplay="border:Red"
+      tfsappmode="debug"
+      tfssecurityalert="false"
+      tfsformid="xxx.xxx.xx"
+      tfsformname="&lt;span class='form-name'&gt;Jasmine Spec Runner&lt;/span&gt;&lt;span class='copyrights'&gt; כל הזכויות שמורות מדינת ישראל שרות הטפסים ©&lt;/span&gt;"
+      tfssubmitactionparam="action:postform;url:http://xxx;actiononreturn:function{submitFormCallBack}"
+      tfsuimode="Agforms2Html;Mobile"
+      tfshiddenbuttons="saveaspdf;print;submit"
+      tfsenabledbuttons="displaysign;Sign;Encrypt;reset;import;export;save"
+      tfsmaxtotalattachmentssize="6144"></span>
+<div>
+    <input id="regularInput" class="tfsInputText" />
+    <input id="regularAttachment" class="tfsInputText" />
+    <input id="attachment" class="tfsInputText"
+           tfsname="צרופה" tfsdatatype="attachment" tfsdata value="attachment1" />
+    <input id="validAttachmentInput" class="tfsInputText"
+           tfsname="צרופה" tfsdatatype="attachment" tfsdata tfsaction="addattachment" />
+    <input id="unknownAttributesInput" class="tfsInputText"
+           tfsname="צרופה" tfsdatatype="attachment1" tfsdata tfsaction="addattachment1" />
+    <input id="tfsValueInput" tfsvalue="xxx" class="tfsInputText" />
+    <table id="attachmentsTable" tfsdata tfsstaticrows="true">
+        <tbody>
+            <tr>
+                <td>
+                    <div>
+                        <label>
+                            <input id="tableAttachment1" tfsrowdata tfsdatatype="attachment"
+                                   class="tfsInputText" />
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label>
+                            <input id="tableAttachment2" tfsrowdata tfsdatatype="attachment"
+                                   class="tfsInputText" />
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="select" data-bind="attr:{title: resources.selectCity}" title="בחר יישוב">
+        <select class="tfsInputCombo" id="pickUp_Town" style="DISPLAY: none" tfsdatatype="LookUpWindow"
+                tfsbind="text:dataText;value:dataCode;url:https://xxx.xxx.xx;addEmptyValue=false;nodeList:/xx;method:post;ondemand:true"
+                tfsselect="" tfslastbind="text:dataText;value:dataCode;url:https://xxx.xxx.xx;addEmptyValue=false;nodeList:/xx;method:post;ondemand:true"></select>
+        <input class="tfsInputCombo lookup-input lookup-input-override ui-autocomplete-input"
+               id="Town" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)"
+               onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text"
+               placeholder="" tfsvalue="431" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none" tfsrequired="true" autocomplete="off">
+        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible">109 results are available, use up and down arrow keys to navigate.</span><input class="lookup-arrow lookup-arrow-override" id="arrow_Town" type="button" tfsshowdropdownbtn="false">
+        <button class="lookup-arrow lookup-arrow-override" id="arrow_Town" type="button" tfsshowdropdownbtn="false"><i class="ic-lookup-arrow"></i></button> <ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-4" tabindex="0" style="z-index: 999; display: none; width: 295px; top: 60.8594px; left: 15.1406px;"></ul>
+    </div>
+</div>

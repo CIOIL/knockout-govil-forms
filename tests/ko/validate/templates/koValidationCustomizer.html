@@ -1,0 +1,67 @@
+﻿<div class="col-md-4">
+    <label for="input" id="input-lbl">
+    <span data-bind="text:label1"></span>
+</label>
+    <input id="input" data-bind="value:input1" />
+</div>
+
+<div class="col-md-4">
+    <label for="input1" id="input1-lbl">
+    <span data-bind="text:label1"></span>
+    <span data-bind="text:label1"></span>
+</label>
+    <input id="input1" data-bind="value:input2" />
+</div>
+
+<div class="col-md-4">
+    <label for="input2"  data-bind="text:label1" id="input2-lbl"></label>
+    <input id="input2" data-bind="value:input3" />
+</div>
+
+<div class="col-md-4">
+    <label for="input3"  id="input3-lbl">שדה:
+        <span  data-bind="text:label1"></span>
+    </label>
+    <input id="input3" data-bind="value:input4" />
+</div>
+
+<div class="required-wrapper col-md-8" data-bind="requiredWrapper: radioInput">
+    <label id="RadioInputLabel" data-bind="text: radioLabel"></label>
+    <div class="radio radiogroupContainer" role="radiogroup" aria-labelledby="RadioInputLabel">
+        <div class="inline-element">
+            <input class="tfsInputRadio" data-bind="checked: radioInput" id="RadioInput1" name="RadioInput" tfsdata="" type="radio" value="1" />
+            <label class="label-radio-combined" for="RadioInput1">
+                <span>כן</span>
+            </label>
+        </div>
+        <div class="inline-element">
+            <input class="tfsInputRadio" data-bind="checked: radioInput" id="RadioInput2" name="RadioInput" tfsdata="" type="radio" value="0" />
+            <label class="label-radio-combined" for="RadioInput2">
+                <span>לא</span>
+            </label>
+        </div><span class="validationMessage" id="vmsg_RadioInput" aria-live="assertive" data-bind="validationMessage: radioInput"></span>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <label for="input4" id="input4-lbl"><span data-bind="text:label1"></span> שדה חמישי </label>
+    <input id="input4" data-bind="value:input5" />
+</div>
+
+<div data-bind="requiredWrapper: radioInput2">
+    <label id="radioInput2Label">רדיו 2 לבדיקה</label>
+    <div class="radio radiogroupContainer" role="radiogroup" aria-labelledby="radioInput2Label">
+        <div class="inline-element">
+            <input data-bind="checked: radioInput2" id="radioInput21" name="radioInput2" tfsdata="" type="radio" value="1" />
+            <label>
+                <span>כן</span>
+            </label>
+        </div>
+        <div class="inline-element">
+            <input data-bind="checked: radioInput2" id="radioInput22" name="radioInput2" tfsdata="" type="radio" value="0" />
+            <label>
+                <span>לא</span>
+            </label>
+        </div><span class="validationMessage" id="vmsg_radioInput2" aria-live="assertive" data-bind="validationMessage: radioInput2"></span>
+    </div>
+</div>

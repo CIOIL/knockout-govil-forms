@@ -1,0 +1,10 @@
+﻿<div class="range" >
+    <div class="required-range">
+        <div data-bind="foreach:valuesArray ">
+            <button id="rangeId" class="step" 
+                    data-bind="html:$data, click: $parent.setSelectedValue,css: { checked: $parent.isSelected($data)},style:{ width:$parent.stepWidth()},attr:{'data-toFocus':$parent.isFocus($index)} "></button>
+        </div>
+        <input class="hide" id=""  tfsdata
+               data-bind="value: selectedValue" />
+    </div>
+</div>

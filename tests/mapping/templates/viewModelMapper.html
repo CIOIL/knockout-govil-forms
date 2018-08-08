@@ -1,0 +1,449 @@
+﻿<div id="mapSection">
+
+    <div class="row" data-bind="with:dataModel">
+        <div class="col-md-4 required-wrapper">
+            <label>radio</label>
+            <div class="radio">
+                <input name="type" class="tfsInputradio" id="pradio" type="radio" value="1" tfsdata="" data-bind="checked: radio">
+                <input name="type" class="tfsInputradio" id="zradio" type="radio" value="2" tfsdata="" data-bind="checked: radio">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label>noExit</label>
+            <input class="tfsInputText"
+                   id="noExit" tfsdata=""
+                   data-bind="value:noExit" />
+        </div>
+        <div class="col-md-2">
+            <label>text</label>
+            <input class="tfsInputText"
+                   id="emptytext" tfsdata=""
+                   data-bind="value:emptyText" />
+        </div>
+        <div class="col-md-2">
+            <label>ignoreText</label>
+            <input class="tfsInputText"
+                   id="ignoretext" tfsdata=""
+                   data-bind="value:ignoreText" />
+        </div>
+        <div class="col-md-2">
+            <label>ignoreonlyiftrue</label>
+            <input class="tfsInputText"
+                   id="ignoreonlyiftrue" tfsdata=""
+                   data-bind="value:ignoreOnlyIfTrue" />
+        </div>
+        <div class="col-md-2">
+            <label>ignoreonlyiffals</label>
+            <input class="tfsInputText"
+                   id="ignoreonlyiffals" tfsdata=""
+                   data-bind="value:ignoreOnlyIfFals" />
+        </div>
+        <div class="col-md-2">
+            <label>text</label>
+            <input class="tfsInputText"
+                   id="fulltext" tfsdata=""
+                   data-bind="value:fullText" />
+        </div>
+        <div class="col-md-2">
+            <label>text</label>
+            <input class="tfsInputText"
+                   id="firstfull1_1" tfsdata=""
+                   data-bind="value:firstFull1" />
+            <span id="text1" data-bind="text:text1"></span>
+        </div>
+        <div class="col-md-2">
+            <label>text</label>
+            <input class="tfsInputText"
+                   id="firstfull1_1" tfsdata=""
+                   data-bind="value:firstFull1" />
+        </div>
+        <div class="col-md-2">
+            <label>text</label>
+            <input class="tfsInputText"
+                   id="firstfull2_1" tfsdata=""
+                   data-bind="value:firstFull2" />
+        </div>
+        <div class="col-md-2">
+            <label>text</label>
+            <input class="tfsInputText"
+                   id="firstfull2_2" tfsdata=""
+                   data-bind="value:firstFull2" />
+        </div>
+        <div class="col-md-4">
+            <div class="select">
+                <label>lookup</label>
+                <select class="tfsInputCombo" id="pickUp_street" style="DISPLAY: none" tfsdatatype="LookUpWindow" placeholder="בחר רחוב" tfsselect=""></select>
+                <input class="tfsInputCombo lookup-input lookup-input-override" id="street" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text" tfsdata="" data-bind="tlpLookUp:{ value: lookUp,forceValueFromOptions:false}" placeholder="" tfsvalue="6591" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none" tfsbind="" title="">
+                <input class="lookup-arrow lookup-arrow-override" id="arrow_street"  onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                <button class="lookup-arrow lookup-arrow-override" id="arrow_street" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                    <i class="ic-lookup-arrow"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="checkBox">
+            <input class="tfsInputcheckBox" id="signf" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxFalse">
+            <input class="tfsInputcheckBox" id="signt" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxTrue">
+            <label><span>checkBox</span></label>
+        </div>
+        <div class="checkBox">
+            <input class="tfsInputcheckBox" id="ignorecheckbox" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: ignoreCheckbox">
+
+            <label><span>ignorecheckbox</span></label>
+        </div>
+        <div class="col-md-4">
+            <label class="required">attachment</label>
+            <div class="attachment-wrapper">
+                <div class="attachment-inner"><a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#"><input tabindex="-1" class="tfsInputText" id="fileidprint" style="DIRECTION: rtl" tfsdata="" data-bind="value:attachment" tfsdatatype="attachment" placeholder="שם קובץ: 1 - Copy.jpg" tfsuploaded="true" tfsaction="displayAttachment" title="שם קובץ: 1 - Copy.jpg"><img title="שם קובץ: 1 - Copy.jpg" alt="הוסף צרופה"  tfssrc="attachEmpty.gif" tfsaction="addAttachment"></a></div><input class="attachment" id="_form_fileidprint" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file" title="שם קובץ: 1 - Copy.jpg" _title="בחר קובץ" readonly="readonly">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label class="required">ignoreattachment</label>
+            <div class="attachment-wrapper">
+                <div class="attachment-inner"><a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#"><input tabindex="-1" class="tfsInputText" id="ignoreattachment" style="DIRECTION: rtl" tfsdata="" data-bind="value:ignoreAttachment" tfsdatatype="attachment" placeholder="שם קובץ: 1 - Copy.jpg" tfsuploaded="true" tfsaction="displayAttachment" title="שם קובץ: 1 - Copy.jpg"><img title="שם קובץ: 1 - Copy.jpg" alt="הוסף צרופה" tfssrc="attachEmpty.gif" tfsaction="addAttachment"></a></div><input class="attachment" id="_form_fileidprint" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file" title="שם קובץ: 1 - Copy.jpg" _title="בחר קובץ" readonly="readonly">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label>select</label>
+            <select class="tfsInputCombo" id="status" tfsdata="" data-bind="value: select, options: statusList,optionsText:'value',optionsValue:'key',optionsCaption:'בחר'" title=""></select>
+        </div>
+        <div>
+            <table id="primitivearr" tfsdata>
+                <tbody data-bind="foreach:primitiveArr">
+                    <tr>
+                        <td>
+                            <input id="data" tfsdata data-bind="value:$data" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row" data-bind="with:listDataModel">
+        <div class="col-md-12 dtable">
+            
+            <table class="table" id="listdatamodel" tfsrowdata="" tfsstaticrows="true">
+                <thead></thead>
+                <tbody data-bind="foreach: list" tfsstaticrows="true">
+                    <tr>
+                        <td>
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <label>text</label>
+                                    <input class="tfsInputText"
+                                           id="texttable" tfsrowdata=""
+                                           data-bind="value:fullText" />
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="select">
+                                        <label>lookup</label>
+                                        <select class="tfsInputCombo" id="pickUp_streettable" style="DISPLAY: none" tfsdatatype="LookUpWindow" placeholder="בחר רחוב" tfsselect=""></select>
+                                        <input class="tfsInputCombo lookup-input lookup-input-override" id="streettable" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text" tfsrowdata="" data-bind="tlpLookUp:{ value: lookUp,forceValueFromOptions:false}" placeholder="" tfsvalue="6591" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none" title="">
+                                        <input class="lookup-arrow lookup-arrow-override" id="arrow_streettable" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                                        <button class="lookup-arrow lookup-arrow-override" id="arrow_streettable" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                                            <i class="ic-lookup-arrow"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="checkBox">
+                                    <input class="tfsInputcheckBox" id="signtablef" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxFalse">
+                                    <input class="tfsInputcheckBox" id="signtablet" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxTrue">
+                                    <label><span>checkBox</span></label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="required">attachment</label>
+                                    <div class="attachment-wrapper">
+                                        <div class="attachment-inner"><a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#"><input tabindex="-1" class="tfsInputText" id="fileidprinttable" style="DIRECTION: rtl" tfsrowdata="" data-bind="value:attachment" tfsdatatype="attachment" placeholder="שם קובץ: 1 - Copy.jpg" tfsuploaded="true" tfsaction="displayAttachment" title="שם קובץ: 1 - Copy.jpg"><img title="שם קובץ: 1 - Copy.jpg" alt="הוסף צרופה" tfssrc="attachEmpty.gif" tfsaction="addAttachment"></a></div><input class="attachment" id="_form_fileidprint" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file" title="שם קובץ: 1 - Copy.jpg" _title="בחר קובץ" readonly="readonly">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>select</label>
+                                    <select class="tfsInputCombo" id="statustable" tfsrowdata="" data-bind="value: select, options: statusList,optionsText:'value',optionsValue:'key',optionsCaption:'בחר'" title=""></select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table class="table" id="ignorelistdatamodel" tfsrowdata="" tfsstaticrows="true">
+                <thead></thead>
+                <tbody data-bind="foreach: ignoreList" tfsstaticrows="true">
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label>text</label>
+                                    <input class="tfsInputText"
+                                           id="ignoretexttable" tfsrowdata=""
+                                           data-bind="value:fullText" />
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row" data-bind="with:nestedListDataModel">
+        <div class="col-md-12 dtable">
+            <table class="table" id="outerlist" tfsdata="" tfsstaticrows="true">
+                <thead></thead>
+                <tbody data-bind="foreach: outerList" tfsstaticrows="true">
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-12 dtable">
+                                    <table class="table" id="innerlist" tfsrowdata="" tfsstaticrows="true">
+                                        <thead></thead>
+                                        <tbody data-bind="foreach: list" tfsstaticrows="true">
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <label>text</label>
+                                                            <input class="tfsInputText"
+                                                                   id="textinnertable" tfsrowdata=""
+                                                                   data-bind="value:fullText" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="select">
+                                                                <label>lookup</label>
+                                                                <select class="tfsInputCombo" id="pickUp_streetinnertable" style="DISPLAY: none" tfsdatatype="LookUpWindow" placeholder="בחר רחוב" tfsselect=""></select>
+                                                                <input class="tfsInputCombo lookup-input lookup-input-override" id="streetinnertable" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text" tfsrowdata="" data-bind="tlpLookUp:{ value: lookUp,forceValueFromOptions:false}" placeholder="" tfsvalue="6591" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none" title="">
+                                                                <input class="lookup-arrow lookup-arrow-override" id="arrow_streetinnertable"  onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                                                                <button class="lookup-arrow lookup-arrow-override" id="arrow_streetinnertable" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                                                                    <i class="ic-lookup-arrow"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkBox">
+                                                            <input class="tfsInputcheckBox" id="signinnertablef" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxFalse">
+                                                            <input class="tfsInputcheckBox" id="signinnertablet" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxTrue">
+                                                            <label><span>checkBox</span></label>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="fileidprint" class="required">attachment</label>
+                                                            <div class="attachment-wrapper">
+                                                                <div class="attachment-inner"><a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#"><input tabindex="-1" class="tfsInputText" id="fileidprintinnertable" style="DIRECTION: rtl" tfsrowdata="" data-bind="value:attachment" tfsdatatype="attachment" placeholder="שם קובץ: 1 - Copy.jpg" tfsuploaded="true" tfsaction="displayAttachment" title="שם קובץ: 1 - Copy.jpg"><img title="שם קובץ: 1 - Copy.jpg" alt="הוסף צרופה" tfssrc="attachEmpty.gif" tfsaction="addAttachment"></a></div><input class="attachment" id="_form_fileidprint" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file" title="שם קובץ: 1 - Copy.jpg" _title="בחר קובץ" readonly="readonly">
+                                                            </div><span class="validationMessage" style="display: none;"></span>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label>select</label>
+                                                            <select class="tfsInputCombo" id="statusinnertable" tfsrowdata="" data-bind="value: select, options: statusList,optionsText:'value',optionsValue:'key',optionsCaption:'בחר'" title=""></select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="row" data-bind="with:nestedListWithoutMapSettings">
+        <div class="col-md-12 dtable">
+            <table class="table" id="outerlistmap" tfsdata="" tfsstaticrows="true">
+                <thead></thead>
+                <tbody data-bind="foreach: outerList" tfsstaticrows="true">
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-12 dtable">
+                                    <table class="table" id="innerlistmap" tfsrowdata="" tfsstaticrows="true">
+                                        <thead></thead>
+                                        <tbody data-bind="foreach: list" tfsstaticrows="true">
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+
+                                                        <div class="col-md-2">
+                                                            <label>text</label>
+                                                            <input class="tfsInputText"
+                                                                   id="textinnertablemap" tfsrowdata=""
+                                                                   data-bind="value:fullText" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="select">
+                                                                <label>lookup</label>
+                                                                <select class="tfsInputCombo" id="pickUp_streetinnertablemap" style="DISPLAY: none" tfsdatatype="LookUpWindow" placeholder="בחר רחוב" tfsselect=""></select>
+                                                                <input class="tfsInputCombo lookup-input lookup-input-override" id="streetinnertablemap" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text" tfsrowdata="" data-bind="tlpLookUp:{ value: lookUp,forceValueFromOptions:false}" placeholder="" tfsvalue="6591" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none" title="">
+                                                                <input class="lookup-arrow lookup-arrow-override" id="arrow_streetinnertablemap"  onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                                                                <button class="lookup-arrow lookup-arrow-override" id="arrow_streetinnertablemap" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                                                                    <i class="ic-lookup-arrow"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkBox">
+                                                            <input class="tfsInputcheckBox" id="signinnertablemapf" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxFalse">
+                                                            <input class="tfsInputcheckBox" id="signinnertablemapt" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxTrue">
+                                                            <label><span>checkBox</span></label>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="fileidprint" class="required">attachment</label>
+                                                            <div class="attachment-wrapper">
+                                                                <div class="attachment-inner"><a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#"><input tabindex="-1" class="tfsInputText" id="fileidprintinnertablemap" style="DIRECTION: rtl" tfsrowdata="" data-bind="value:attachment" tfsdatatype="attachment" placeholder="שם קובץ: 1 - Copy.jpg" tfsuploaded="true" tfsaction="displayAttachment" title="שם קובץ: 1 - Copy.jpg"><img title="שם קובץ: 1 - Copy.jpg" alt="הוסף צרופה" tfssrc="attachEmpty.gif" tfsaction="addAttachment"></a></div><input class="attachment" id="_form_fileidprint" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file" title="שם קובץ: 1 - Copy.jpg" _title="בחר קובץ" readonly="readonly">
+                                                            </div><span class="validationMessage" style="display: none;"></span>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label>select</label>
+                                                            <select class="tfsInputCombo" id="statusinnertablemap" tfsrowdata="" data-bind="value: select, options: statusList,optionsText:'value',optionsValue:'key',optionsCaption:'בחר'" title=""></select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div id="xmlTag">
+    <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" formid="xxx@xxx" formversion="0.0.3.26" formcompiletime="">
+        <form>
+            <type>2</type>
+            <emptytext xsi:nil="true"></emptytext>
+
+            <fulltext>a</fulltext>
+
+            <firstfull1_1>1</firstfull1_1>
+            <firstfull1_2>2</firstfull1_2>
+
+            <firstfull2_1 xsi:nil="true"></firstfull2_1>
+            <firstfull2_2>2</firstfull2_2>
+
+            <street text="ירושלים">5</street>
+            <signf>false</signf>
+            <signt>true</signt>
+            <status text="גרוש">2</status>
+            <fileidprint filename="1.jpg">###</fileidprint>
+            <ignoretext>1</ignoretext>
+            <ignoreonlyiftrue>1</ignoreonlyiftrue>
+            <ignoreonlyiffals>not ignore</ignoreonlyiffals>
+            <ignorecheckbox></ignorecheckbox>
+            <ignoreattachment></ignoreattachment>
+            <ignorelookup text="הרצליה"> 1</ignorelookup>
+            <primitivearr>
+                <data>1</data>
+            </primitivearr>
+            <primitivearr>
+                <data>2</data>
+            </primitivearr>
+            <primitivearr>
+                <data>3</data>
+            </primitivearr>
+            <listdatamodel>
+                <texttable>row1</texttable>
+                <streettable text="בת ים">4</streettable>
+                <signtablef>false</signtablef>
+                <signtablet>true</signtablet>
+                <statustable xsi:nil="true" text=""></statustable>
+                <fileidprinttable filename="2.jpg">###</fileidprinttable>
+            </listdatamodel>
+            <listdatamodel>
+                <texttable>row2</texttable>
+                <streettable text="הרצליה">1</streettable>
+                <signtablef>false</signtablef>
+                <signtablet>true</signtablet>
+                <statustable xsi:nil="true" text=""></statustable>
+                <fileidprinttable filename="3.jpg">###</fileidprinttable>
+            </listdatamodel>
+            <listdatamodel>
+                <texttable>row3</texttable>
+                <streettable text="אשדוד">8</streettable>
+                <signtablef>false</signtablef>
+                <signtablet>true</signtablet>
+                <statustable xsi:nil="true" text=""></statustable>
+                <fileidprinttable filename="8.jpg">###</fileidprinttable>
+            </listdatamodel>
+            <ignorelistdatamodel></ignorelistdatamodel>
+            <ignorelistdatamodel></ignorelistdatamodel>
+            <ignorelistdatamodel></ignorelistdatamodel>
+            <outerlist>
+                <innerlist>
+                    <formtypeinnertable>1</formtypeinnertable>
+                    <textinnertable>11</textinnertable>
+                    <streetinnertable text="רעננה">3</streetinnertable>
+                    <signinnertablef>false</signinnertablef>
+                    <signinnertablet>true</signinnertablet>
+                    <statusinnertable xsi:nil="true" text=""></statusinnertable>
+                    <fileidprintinnertable filename="4.jpg">###</fileidprintinnertable>
+                </innerlist>
+            </outerlist>
+            <outerlist>
+                <innerlist>
+                    <formtypeinnertable>1</formtypeinnertable>
+                    <textinnertable>22</textinnertable>
+                    <streetinnertable text="תל אביב">6</streetinnertable>
+                    <signinnertablef>false</signinnertablef>
+                    <signinnertablet>true</signinnertablet>
+                    <statusinnertable xsi:nil="true" text=""></statusinnertable>
+                    <fileidprintinnertable filename="5.jpg">###</fileidprintinnertable>
+                </innerlist>
+                <innerlist>
+                    <formtypeinnertable>1</formtypeinnertable>
+                    <textinnertable>33</textinnertable>
+                    <streetinnertable text="פתח תקוה">7</streetinnertable>
+                    <signinnertablef>false</signinnertablef>
+                    <signinnertablet>true</signinnertablet>
+                    <statusinnertable xsi:nil="true" text=""></statusinnertable>
+                    <fileidprintinnertable filename="6.jpg">###</fileidprintinnertable>
+                </innerlist>
+            </outerlist>
+            <outerlistmap>
+                <innerlistmap>
+                    <formtypeinnertablemapmap>1</formtypeinnertablemapmap>
+                    <textinnertablemap>11</textinnertablemap>
+                    <streetinnertablemap text="רעננה">3</streetinnertablemap>
+                    <signinnertablemapf>false</signinnertablemapf>
+                    <signinnertablemapt>true</signinnertablemapt>
+                    <statusinnertablemap xsi:nil="true" text=""></statusinnertablemap>
+                    <fileidprintinnertablemap filename="4.jpg">###</fileidprintinnertablemap>
+                </innerlistmap>
+            </outerlistmap>
+            <outerlistmap>
+                <innerlistmap>
+                    <formtypeinnertablemap>1</formtypeinnertablemap>
+                    <textinnertablemap>22</textinnertablemap>
+                    <streetinnertablemap text="תל אביב">6</streetinnertablemap>
+                    <signinnertablemapf>false</signinnertablemapf>
+                    <signinnertablemapt>true</signinnertablemapt>
+                    <statusinnertablemap xsi:nil="true" text=""></statusinnertablemap>
+                    <fileidprintinnertablemap filename="5.jpg">###</fileidprintinnertablemap>
+                </innerlistmap>
+                <innerlistmap>
+                    <formtypeinnertablemap>1</formtypeinnertablemap>
+                    <textinnertablemap>33</textinnertablemap>
+                    <streetinnertablemap text="פתח תקוה">7</streetinnertablemap>
+                    <signinnertablemapf>false</signinnertablemapf>
+                    <signinnertablemapt>true</signinnertablemapt>
+                    <statusinnertablemap xsi:nil="true" text=""></statusinnertablemap>
+                    <fileidprintinnertablemap filename="6.jpg">###</fileidprintinnertablemap>
+                </innerlistmap>
+            </outerlistmap>
+        </form>
+    </root>
+</div>

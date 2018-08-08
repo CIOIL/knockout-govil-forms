@@ -1,0 +1,19 @@
+﻿<div class="form-main-title" data-bind="css: {culture: toggleLanguagesButton.isMultiLanguages()}">
+    <div class="inner-wrapper">
+
+        <div class="ref-num" data-bind="css: {'float-left': !toggleLanguagesButton.isMultiLanguages()}">
+            <span data-bind="text: labels().referenceNum"></span>:
+            <span class="TitleLock" id="ReferenceNumber" tfsdata tfsdonotimportbytoolbar data-bind="tlpInitialText: formInformation.referenceNumber"></span>
+        </div>
+
+        <h1 class="title" data-bind="css: {'float-right': !toggleLanguagesButton.isMultiLanguages()}, text: labels().formName"></h1>
+
+        <div class="hide">
+            <span data-bind="text:labels().date"></span>:
+            <span data-bind="text: formInformation.loadingDate"></span>
+        </div>
+        <div tfsinclude="CDN/builder/src/components/toggleLanguagesButton/toggleLanguagesButton.html" data-bind="visible: toggleLanguagesButton.isMultiLanguages, with: toggleLanguagesButton">
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>

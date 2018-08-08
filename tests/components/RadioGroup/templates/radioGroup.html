@@ -1,0 +1,34 @@
+﻿<div class="col-md-4" tfstexttoreplace="{className:col-md-6}"
+     tfsinclude="CDN/builder/src/components/RadioGroup/RadioGroupField.html"
+     tfsbuilduniqueid="Gender" tfsbuilddynamictable="true"
+     data-bind="with: gender" tfsbuilduniquename=" בכרטיסית הצהרה וחתימה">
+    <!-- ----- tfsInclude file CDN/builder/src/components/RadioGroup/RadioGroupField.html ----- -->
+    <div class="float full-width radiogroup-field-container" data-bind="requiredWrapper:selectedValue">
+        <label data-bind="text:text"></label>
+        <div tfstexttoreplace="{className:col-md-6}"
+             tfsinclude="CDN/builder/src/components/RadioGroup/RadioGroup.html"
+             tfsbuilddynamictable="true" tfsbuilduniqueid="Gender" tfsbuilduniquename=" בכרטיסית הצהרה וחתימה">
+            <!-- ----- tfsInclude file CDN/builder/src/components/RadioGroup/RadioGroup.html ----- -->
+            <div class="radio-group" id="GenderRadiogroupContainer" role="radiogroup" data-bind="ariaLabelForContainer: true">
+                <!-- ko foreach: radioArray -->
+                <div class="col-md-6" data-bind="attr: { title: dataTitle }">
+                    <button role="radio" class="radio-button" data-bind="click: $parent.setSelectedValue, addBindings: optionsBinding, attr:{'aria-label':dataText,'data-toFocus':$parent.isFocus($index),'aria-checked':$parent.getAriaCheckedVal($data),'tabindex':$parent.getTabindexVal($data,$index)}">
+                        <span data-bind="css: { checked: $parent.isSelected($data) }"></span>
+                    </button>
+                    <span class="radio-label" data-bind="radioLabel:$parent.selectedValue,text: dataText,css:{'radio-label-checked':$parent.isSelected($data) }">
+                    </span>
+                </div>
+                <!-- /ko  -->
+                <input class="hide"
+                       id="Gender"
+                       tfsrowdata
+                       data-bind="value: selectedValue" />
+                <span class="validationMessage" data-bind="validationMessage: selectedValue"></span>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="clr"></div>
+</div>

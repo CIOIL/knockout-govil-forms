@@ -1,0 +1,8 @@
+﻿<div class="select">
+    <label for="[#Street]"><span data-bind="text: labels().title"></span></label>
+    <select id="[#Street]"
+            tfsdatatype="LookUpWindow" class="tfsInputCombo"
+            placeholder="בחר רחוב"
+            tfsselect tfsdata
+            data-bind="tlpLookUp:{value: value,forceValueFromOptions:settings.model.forceValueFromOptions,bindOnSelect:{lookupOptions:streetList}},tlpBindList:bindStreetListSettings"></select>
+</div>

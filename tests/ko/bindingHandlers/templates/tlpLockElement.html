@@ -1,0 +1,65 @@
+﻿f<div class="tfsOuterDiv" id="OuterDiv">
+    <div id="divToLock">
+        <input id="inputElement" class="tfsInputText" />
+
+        <input id="secondInputElement" />
+
+        <select id="selectElement">
+            <option value="1">text1</option>
+            <option value="2">text2</option>
+        </select>
+
+        <textarea id="textareaElement"></textarea>
+        <div id="attachmentElementContainer" class="attachment-wrapper">
+            <div class="attachment-inner">
+                <a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#">
+                    <input tabindex="-1" class="tfsInputText" id="attachmentElement" tfsdatatype="attachment" placeholder="לחץ להוספת קובץ" tfsuploaded="false">
+                    <img alt="הוסף צרופה" tfssrc="attachEmpty.gif" tfsaction="addAttachment">
+                </a>
+            </div>
+            <input class="attachment" id="_form_attachmentElement" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file">
+        </div>
+
+        <div id="lookupElementContainer" class="select">
+            <select id="pickUp_lookupElement" class="tfsInputCombo" style="DISPLAY: none" name="lookupElement" tfsselect="" tfsdatatype="lookUpWindow"></select>
+            <input onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" id="lookupElement" class="tfsInputCombo lookup-input lookup-input-override" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" tfsdata="" tfsname="ישוב" tfsvalue="" tfsshowdropdownbtn="false" placeholder="" tfslookupwindow="" data-role="none">
+            <input onclick="showLookUpWindow(this)" id="arrow_lookupElement" class="lookup-arrow lookup-arrow-override" type="button" tfsshowdropdownbtn="false">
+            <button onclick="showLookUpWindow(this)" id="arrow_lookupElement" class="lookup-arrow lookup-arrow-override" tfsshowdropdownbtn="false">
+                <i class="ic-lookup-arrow"></i>
+            </button>
+        </div>
+
+        <div id="dateElementContainer" class="date">
+            <input title="בחר תאריך מתאריכון" class="tfsInputDate" id="dateElement" tfsdatatype="date" tfsrowdata="" style="margin-left: 0px;" parentlockuniqueid="1480430391981">
+            <input class="tfsCalendar" style="height: 22px; width: 21px; text-align: center; padding-left: 1px; padding-right: 1px; background-position: 1px 1px; background-repeat: no-repeat;
+                                   background-image: url(&quot;/AGFormSite/WebResource.axd?d=lTHtWARNgw1lg_Tk7IHRlV6wbAM4FcZnIOpBjf8h6WJCvFkC8RwTguqopUOMyoTyUMAmChqyGOQ8HciTN2oUrgOhxgm76-tITuJU8I-rU7ZdlRlENbg56Vk9yBswuaImqFGpNG9dxrkFel9s6DFZdgx6aguzEmUxbtpPobiJofmM8iEpAPJY4w6Lj1kyLIEH26QEtZrpjSMSFFtoBWvmJw2&amp;t=636137621152072656&quot;);"
+                   onclick="jscript:showCalendar(this)" type="button" value="..." title="בחר תאריך מתאריכון" parentlockuniqueid="1480430391981">
+        </div>
+
+        <input id="buttonElement" type="button" />
+    </div>
+
+    <div id="parent">
+
+        <div class="checkBox">
+            <input type="checkBox" class="tfsInputcheckBox" id="firstOption" tfsname="אופציה א" value="firstOption" />
+            <label for="byReport">
+                <span>אופציה א</span>
+            </label>
+        </div>
+
+
+        <div class="checkBox">
+            <input type="checkBox" class="tfsInputcheckBox" id="other" tfsname="אחר" value="other" />
+            <label for="other">
+                <span>אחר</span>
+            </label>
+        </div>
+
+
+        <input class="tfsInputText"
+               id="fromOther" tfsname="פירוט"
+               />
+
+    </div>
+</div>

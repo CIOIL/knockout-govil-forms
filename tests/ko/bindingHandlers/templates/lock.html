@@ -1,0 +1,109 @@
+﻿<div class="tfsOuterDiv" id="OuterDiv">
+    <div id="formDiv" data-bind="tlpLock:needLockThirdContainer">
+        <div id="containerDivToLock" data-bind="tlpLock:needLockSecondContainer">
+            <div class="row" data-bind="tlpLock:needLockFirstContainer">
+                <div class="col-md-4">
+                    <input id="inputElementWithOwnLock" class="tfsInputText" data-bind="tlpLock: needLockElement" />
+                </div>
+            </div>
+            <select id="selectElement" data-bind="tlpLock: needLockElement">
+                <option value="1">text1</option>
+                <option value="2">text2</option>
+            </select>
+
+            <textarea id="textareaElement" data-bind="tlpLock: needLockElement"></textarea>
+            <div id="attachmentElementContainer" class="attachment-wrapper">
+                <div class="attachment-inner">
+                    <a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#">
+                        <input tabindex="-1" class="tfsInputText" id="attachmentElement" data-bind="tlpLock: needLockElement" tfsdatatype="attachment" placeholder="לחץ להוספת קובץ" tfsuploaded="false">
+                        <img alt="הוסף צרופה" tfsaction="addAttachment">
+                    </a>
+                </div>
+                <input class="attachment" id="_form_attachmentElement" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file">
+            </div>
+
+            <div title="בחר עיר" class="select citySelect">
+                <label for="City">ישוב</label>
+                <select class="tfsInputCombo" id="pickUp_City" style="DISPLAY: none" value="ירושלים" tfsdatatype="LookUpWindow" placeholder="בחר עיר מגורים" tfsbind="text:dataText;value:dataCode;url:mock;nodeList:/root/City;method:post;ondemand:true" tfsselect=""></select>
+                <input class="tfsInputCombo lookup-input lookup-input-override" id="City" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text" tfsdata="" data-bind="tlpLock: needLockElement" placeholder="" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none" title="">
+                <input class="lookup-arrow lookup-arrow-override" id="arrow_City" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                <button title="בחר מרשימה" class="lookup-arrow lookup-arrow-override" id="arrow_City" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false"><i class="ic-lookup-arrow"></i></button>
+            </div>
+
+            <div id="dateElementContainer" class="date">
+                <input title="בחר תאריך מתאריכון" class="tfsInputDate" id="dateElement" data-bind="tlpLock: needLockElement" tfsdatatype="date" tfsrowdata="" style="margin-left: 0px;" parentlockuniqueid="1480430391981">
+                <input class="tfsCalendar" style="height: 22px; width: 21px; text-align: center; padding-left: 1px; padding-right: 1px; background-position: 1px 1px; background-repeat: no-repeat;"
+                       onclick="jscript:showCalendar(this)" type="button" value="..." title="בחר תאריך מתאריכון" parentlockuniqueid="1480430391981">
+            </div>
+          
+
+            <input id="buttonElement" type="button" data-bind="tlpLock: needLockElement" />
+            <table id="contacts" class="stripesTbl fill-container" tfsdata tfsstaticrows="true">
+                <thead>
+                    <tr>
+                        <td class="noPrint">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>שם פרטי</td>
+                        <td>משפחה</td>
+                    </tr>
+                </thead>
+                <tbody data-bind='foreach: contacts'>
+                    <tr class="tableTR">
+                        <td>
+                            <button id="dellRow"
+                                    name="dellRow"
+                                    class="transparentButton"
+                                    data-bind="removeRow: $parent.contacts"
+                                    title="למחיקת שורה מטבלת מסמכים">
+                                <img tfssrc="del_small.GIF" height="15" width="15" alt="למחיקת שורה מטבלת מסמכים" />
+                            </button>
+                            
+                        </td>
+                        <td>
+                            <span id="tdNum_contacts" name="tdNum_contacts" tfsdefault="1" tfsrowdata data-bind="text: $index() + 1">1</span>
+                        </td>
+                        <td>
+                            <input id="firstName" tfsrowdata tfsname="שם פרטי" class="tfsInputText" data-bind="value: firstName,tlpLock: $parent.needLockElement" />
+                        </td>
+                        <td>
+                            <input id="lastName" tfsrowdata tfsname="משפחה" class="tfsInputText" data-bind="value: lastName,tlpLock: $parent.needLockElement" />
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+            <span id="btnAdd" style="cursor:pointer" class="noPrint">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="addRowMax"
+                        style="background-color:Transparent"
+                        type="button"
+                        data-bind="addRow: contacts,
+                                                maxRows: 3,
+                                                args: { index: 1234, test: 456 }">
+                    <img id="Img1" align="middle" class="noPrint" style="cursor: pointer" title="הוסף שורה" tfssrc="but_add_blue.gif" align="left" border="0">
+                </button>
+                <button id="addRow"
+                        style="background-color:Transparent"
+                        type="button"
+                        data-bind="addRow: contacts">
+                    <img id="Img2" align="middle" class="noPrint" style="cursor: pointer" title="הוסף שורה" tfssrc="but_add_blue.gif" align="left" border="0">
+                </button>
+            </span>
+        </div>
+
+        <div id="containerDiv">
+
+            <input id="input2" />
+
+            <select>
+                <option value="1">text1</option>
+                <option value="2">text2</option>
+            </select>
+
+            <textarea id="textareaElement2"></textarea>
+            <input class="tfsInputText2"
+                   id="fromOther" tfsname="פירוט" />
+        </div>
+    </div>
+</div>

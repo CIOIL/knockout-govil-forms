@@ -1,0 +1,40 @@
+﻿<div class="header" data-bind="with:formInformation">
+    <div class="inner-wrapper">
+        <div class="logo">
+            <!--logo-->
+            <div class="logo-right">
+                <div class="semel-medina semel">
+                    <i class="ic-menorah"></i>
+                </div>
+                <div class="semel-office semel">
+                    <img class="noPrint" src="logo_[#officeEnglishName]_w.png" alt="[#officeHebrewName]" />
+                    <img class="invisibleElem" src="logo_[#officeEnglishName]_print.png" alt="[#officeHebrewName]" />
+                </div>
+                <div class="office-description">
+                    <p role="heading" aria-level="4" data-bind="text: resources.labels().stateOfIsraelTitle"></p>
+                    <p role="heading" aria-level="4" class="bold-text">
+                        [#officeHebrewName]
+                        <span data-bind="text: resources.labels().officeName"></span>
+                    </p>
+                    <p role="heading" aria-level="4" class="bold-text">
+                        [#division]
+                        <span data-bind="text: resources.labels().division"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="logo-left">
+                <a href="http://gov.il/" target="_blank" data-bind="attr:{'aria-label':resources.labels().govil},addDescription:'accessibilityNewWindowAlert'" class="noPrint" alt="gov.il">
+                    <i class="ic-govil semel-mimshal-zamin semel"></i>
+                </a>
+                <i class="ic-govil semel-mimshal-zamin semel invisibleElem"></i>
+            </div>
+        </div>
+    </div>
+    <span class="hidden-element" id="accessibilityNewWindowAlert" data-bind="text: resources.labels().accessibilityNewWindowAlert"></span>
+</div>
+<div class="toolbar">
+    <div class="inner-wrapper">
+        <!--toolbar strip-->
+        <div class="toolbar-operations noPrint" id="_form_DivToolbar_v2"></div>
+    </div>
+</div>

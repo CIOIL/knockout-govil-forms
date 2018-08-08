@@ -1,0 +1,31 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <div tfstexttoreplace="{City:[#City]}"
+             data-bind="with: city" tfsinclude="CDN/builder/src/components/elements/city/City.html"></div>
+    </div>
+    <div class="col-md-4">
+        <div tfstexttoreplace="{Street:[#Street]}"
+             data-bind="with: street" tfsinclude="CDN/builder/src/components/elements/street/Street.html"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <label for="[#HouseNum]"><span data-bind="text: labels().houseNum"></span></label>
+        <input class="tfsInputText" data-bind="value: houseNum"
+               id="[#HouseNum]" tfsdata />
+    </div>
+    <div class="col-md-2">
+        <label for="[#AptNum]"><span data-bind="text: labels().aptNum"></span></label>
+        <input class="tfsInputText"
+               data-bind="value: aptNum"
+               id="[#AptNum]" tfsdata />
+    </div>
+
+    <div class="col-md-2">
+        <label for="[#ZipCode]"><span data-bind="text: labels().zipCode"></span></label>
+        <input class="tfsInputText"
+               id="[#ZipCode]" data-bind="value: zipCode"
+               tfsdata />
+    </div>
+
+</div>

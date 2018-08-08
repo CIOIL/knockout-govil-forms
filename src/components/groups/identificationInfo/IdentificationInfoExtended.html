@@ -1,0 +1,41 @@
+﻿<div class="row">
+    <div class="col-md-12 required-wrapper" data-bind="requiredWrapper: idType">
+        <label data-for="[#idType]"><span data-bind="text: labels().idType"></span></label>
+        <div class="radio ">
+            <span class="radio-combined">
+                <input class="tfsInputradio" id="[#idType]1"
+                       type="radio" name="[#idType]" value="1" data-bind="checked: idType,  tlpLockElement: isEnabledIdType" tfsdata />
+                <label for="[#idType]1" class="label-radio-combined">
+                    <span data-bind="text: labels().idType1"></span>
+                </label>
+            </span>
+            <span class="radio-combined">
+                <input class="tfsInputradio" id="[#idType]2"
+                       type="radio" name="[#idType]" value="2" data-bind="checked: idType,  tlpLockElement: isEnabledIdType" tfsdata />
+                <label for="[#idType]2" class="label-radio-combined">
+                    <span data-bind="text: labels().idType2"></span>
+                </label>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <label for="[#idNum]"><span data-bind="text: labels().idNum"></span></label>
+        <input class="tfsInputText"
+               id="[#idNum]" data-bind="value: idNum, tlpLockElement: !isEnabledIdNum()"
+               dir="ltr" tfsdata />
+    </div>
+    <div class="col-md-4">
+        <label for="[#LastName]"><span data-bind="text: labels().lastName"></span></label>
+        <input class="tfsInputText"
+               id="[#LastName]"
+               data-bind="value: lastName, tlpLockElement: !isEnabledLastName()" tfsdata />
+    </div>
+    <div class="col-md-4">
+        <label for="[#FirstName]"><span data-bind="text: labels().firstName"></span></label>
+        <input class="tfsInputText"
+               id="[#FirstName]"
+               data-bind="value: firstName, tlpLockElement: !isEnabledFirstName()" tfsdata />
+    </div>
+</div>

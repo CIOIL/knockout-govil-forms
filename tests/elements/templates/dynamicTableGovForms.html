@@ -1,0 +1,71 @@
+﻿    <!--Start  container -->
+<div>
+
+	<div class="page-break-inside">
+		<div class="row section-sub-title">
+			<div class="col-md-12">
+				<span class="content" role="heading" aria-level="5">טבלה דינאמית בתוך דינאמית</span>
+			</div>
+		</div>
+
+		<div class="row not-page-break">
+			<div class="dtable col-md-12">
+				<table id="outerDtable" class="table">
+					<thead></thead>
+					<tbody id="contactsTable" data-bind="foreach: contactsList">
+						<tr>
+							<td>
+								<div class="row title">
+									<div class="col-md-12">
+										<div class="del-img-td">
+											<div class="table-title-operation">
+												<div class="accessibility-table-title" role="heading" aria-level="4" data-bind="accessibilityRowTitle: true, tableName: ' בטבלה ראשית'"></div>
+												<div class="table-title-on-the-right">
+													<span>שורה</span>
+													<span id="knockoutTable_outerDtable" name="knockoutTable_outerDtable" data-bind="text: $index() + 1"></span>
+												</div>
+												<div class="table-title-on-the-left">
+													<span id="removeRowSpan" class="hide">מחק שורה מטבלת אנשי קשר</span>
+													<span class="delete-line-label">
+														<input type="button" id="del-img-outerDtable" aria-describedby="removeRowSpan" role="button" class="del-img noPrint" data-tofocus
+															   title="מחק שורה" data-bind="removeRow: $parent.contactList, args: { tableId: 'outerDtable' }" />
+														<span data-bind="removeRow: $parent.contactList, args: { tableId: 'outerDtable' }" aria-label="מחק שורה מטבלת אנשי קשר">מחק שורה</span>
+													</span>
+												</div>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<input class="without-id text-field"  />
+
+									</div>
+									<div class="col-md-4">
+										<label for="dynamicText">שדה טקסט בטבלה דינאמית</label>
+										<input id="dynamicText" class="text-field" data-bind="value: dynamicText" />
+									</div>
+									<div class="col-md-4">
+										<div class="date">
+											<label for="dynamicDate"> תאריך בטבלה דינאמית</label>
+											<input class="date-field" id="dynamicDate" data-date-picker='{"local": "he"}' data-bind="value: dynamicDate" />
+										</div>
+									</div>
+								</div>
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btn-row">
+					<input type="button" class="btn btn-white btn-add noPrint" role="button"
+						   title="הוסף שורה" value="+ הוסף שורה" aria-label="הוסף שורה לטבלת אנשי קשר"
+						   data-bind="addRow:contactList" id="btnAddContact" />
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End  container -->

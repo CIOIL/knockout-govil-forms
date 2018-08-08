@@ -1,0 +1,20 @@
+﻿<div style="DISPLAY: none">
+    <label>תאריך מאופשר באמצעות observable</label>
+    <input id="enabledDate" class="tfsInputDate" data-bind="
+                    tlpEnableDate: enabledDate" tfsdata="" tfsdatatype="date" tfsname="תאריך" style="margin-left: 0px;"><input onclick="jscript:showCalendar(this)" class="tfsCalendar" style="height: 22px; width: 21px; text-align: center; padding-left: 1px; padding-right: 1px;  background-position: 1px 1px; background-repeat: no-repeat;" type="button" value="...">
+    <br>
+    <label>תאריך לא מאופשר באמצעות observable</label>
+    <input id="disabledDate" class="tfsInputDate" data-bind="
+                    tlpEnableDate: disabledDate" tfsdata="" tfsdatatype="date" tfsname="תאריך" disabled="" style="margin-left: 0px;"><input onclick="jscript:showCalendar(this)" class="tfsCalendar" style="height: 22px; width: 21px; text-align: center; padding-left: 1px; padding-right: 1px;  background-position: 1px 1px; background-repeat: no-repeat;" type="button" value="..." disabled="">
+    <br><label>תאריך לא מאופשר באמצעות פונקציה</label>
+    <input id="disableDateByFunction" class="tfsInputDate" data-bind="
+                    tlpEnableDate: disableDateFunction()" tfsdata="" tfsdatatype="date" tfsname="תאריך" disabled="" style="margin-left: 0px;"><input onclick="jscript:showCalendar(this)" class="tfsCalendar" style="height: 22px; width: 21px; text-align: center; padding-left: 1px; padding-right: 1px;  background-position: 1px 1px; background-repeat: no-repeat;" type="button" value="..." disabled="">
+    <br><label>תאריך לא מאופשר באמצעות פונקציה שמחזירה undefined</label>
+    <input id="disableDateByUndefined" class="tfsInputDate" data-bind="
+                    tlpEnableDate: undefinedFunction()" tfsdata="" tfsdatatype="date" tfsname="תאריך" disabled="" style="margin-left: 0px;"><input onclick="jscript:showCalendar(this)" class="tfsCalendar" style="height: 22px; width: 21px; text-align: center; padding-left: 1px; padding-right: 1px;  background-position: 1px 1px; background-repeat: no-repeat;" type="button" value="..." disabled="">
+    <br><label>תאריך לא מאופשר באמצעות computed שמחזיר false</label>
+    <input id="disableDateByComputed" class="tfsInputDate" data-bind="
+                    tlpEnableDate: disableDateByComputed" tfsdata="" tfsdatatype="date" tfsname="תאריך" disabled="" style="margin-left: 0px;"><input onclick="jscript:showCalendar(this)" class="tfsCalendar" style="height: 22px; width: 21px; text-align: center; padding-left: 1px; padding-right: 1px;  background-position: 1px 1px; background-repeat: no-repeat;" type="button" value="..." disabled="">
+    <br><label>שגיאה בעקבות ניסיון לשים tlpEnableDate על input רגיל</label>
+    <input id="simpleInput" class="tfsInputText" tfsdata="">
+</div>

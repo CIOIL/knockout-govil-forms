@@ -1,0 +1,14 @@
+﻿<div class="btn-set-culture noPrint">
+    <a data-bind="click: toggleLanguageDiv, attr:{'aria-label':labels().toggleLanguageButtonDescription }" aria-haspopup="true" href="#" role="button">
+        <i class="ic-language"></i>
+    </a>
+</div>
+<div class="culture-menu noPrint">
+    <ul class="culture-menu-list" role="menu">
+        <li class="culture-title"><a data-bind="click: toggleLanguageDiv, attr:{'aria-label':labels().closeButtonDescription }" href="#" role="button"><i class="ic-ic-x"></i></a></li>
+        <!-- ko foreach: availableLanguagesList -->
+        <li class="li-menu"><a data-bind="click: $parent.toggleLanguage, text: text" role="menuitem" href="#"></a></li>
+        <!-- /ko -->
+    </ul>
+
+</div>

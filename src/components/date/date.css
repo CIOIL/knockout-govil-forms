@@ -1,0 +1,9 @@
+﻿.split-date .col-md-4{
+    padding-right:8px;
+    padding-left:8px;
+    padding-top:0;
+}
+.split-date {
+    overflow: hidden;
+}
+

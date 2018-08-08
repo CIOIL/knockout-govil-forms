@@ -1,0 +1,47 @@
+﻿<ul class="help-and-info-list">
+    <li>
+        <!-- Date and Reference -->
+        <div class="list-title"><div role="heading" aria-level="3"><span data-bind="text: resources.labels().formDetails"></span></div></div>
+    </li>
+    <li>
+        <input id="StageStatus" value="New" class="hide" tfsdata tfsdonotimportbytoolbar data-bind="tlpInitialValue:stageStatus" tfsexcludefromsignature />
+        <input id="dataModelSaver" class="hide" tfsdata data-bind="value: dataModelSaver" tfsexcludefromsignature />
+        <input id="isMobile" class="hide" tfsdata data-bind="value: isMobile" tfsexcludefromsignature />
+        <input id="DeviceType" class="hide" tfsdata data-bind="value: deviceType" tfsexcludefromsignature />
+        <input id="FirstLoadingDate" class="hide" tfsdata data-bind="tlpInitialValue: firstLoadingDate" tfsexcludefromsignature />
+        <p class="referenceNumber">
+            <span data-bind="text: resources.labels().referenceNum"></span>:
+            <span class="TitleLock" data-bind="text: referenceNumber"></span>
+        </p>
+        <p class="date">
+            <span data-bind="text: resources.labels().date"></span>:
+            <span class="TitleLock" id="Date" data-bind="tlpInitialText: loadingDate" tfsdonotimportbytoolbar tfsdata></span>
+        </p>
+    </li>
+    <li>
+        <div class="list-title" role="heading" aria-level="3"><div><span data-bind="text: resources.labels().about"></span></div></div>
+    </li>
+    <li class="about-content">
+        <p>גרסת טופס AGForms 1.1.1</p>
+    </li>
+
+    <li class="splash-page">
+        <p data-bind="text: resources.labels().splashPageText"></p>
+        <input type="button" id="continuebutton"
+               data-bind="attr: { title: resources.labels().startTitle}, value: resources.labels().start"
+               class="btn btn-white" />
+    </li>
+    <li>
+        <div class="list-title" role="heading" aria-level="3"><div><span data-bind="text: feedback.texts().feedback"></span></div></div>
+    </li>
+    <li class="feedback">
+
+        <div class="item"></div>
+        <p><span data-bind="text: feedback.texts().fillIn"></span></p>
+        <div class="inline-block" data-bind="with:feedback" tfsinclude="CDN/builder/src/components/feedback/feedback.html"></div>
+
+        <input type="button" id="btnClose"
+               data-bind="attr: { title: resources.labels().close}, value: resources.labels().close"
+               class="btn btn-blue float-left btn-help-close" />
+    </li>
+</ul>

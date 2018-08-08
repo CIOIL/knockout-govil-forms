@@ -1,0 +1,9 @@
+<span class="btnOpenClose btn-blue noPrint" 
+      data-bind="click: isOpenContent.bind($data, !isOpenContent()),tlpLock:false" >
+    <span class="openRow">
+        <span class="minus" data-bind="visible: isOpenContent()">-</span> 
+        <span class="plus" data-bind="visible: !isOpenContent()" style="display: none;">+</span> 
+    </span>
+    <span data-bind="click:isOpenContent == !isOpenContent,visible: isOpenContent(),bindText:'collapseRow'"></span>
+    <span data-bind="click:isOpenContent == !isOpenContent,visible: !isOpenContent(),bindText:'expandRow'"></span>
+</span>

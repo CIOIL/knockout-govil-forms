@@ -1,0 +1,112 @@
+﻿<div class="row withoutPadding noPrint"
+     data-bind="tlpLock:false">
+    <input title="הרחב תצוגת כלל השורות" class="closeAllRows  noPrint openAll"
+           id="openAllrows" type="button"
+           data-bind="collapseExpandAll: true,table:contactListHybrid,bindText:'collapseAll'" />
+    <input title="צמצם תצוגת כלל השורות"
+           class="closeAllRows closeAll noPrint"
+           id="closeAllrows" type="button"
+           data-bind="collapseExpandAll:false,table:contactListHybrid,bindText:'expandAll'" />
+</div>
+
+<div class="dtable col-md-12">
+    <table id="outerDtable" class="table" tfsdata tfsstaticrows=true>
+        <thead></thead>
+        <tbody data-bind="foreach: contactListHybrid">
+            <tr>
+                <td>
+                    <div class="row title">
+                        <div class="col-md-12">
+                            <div class="del-img-td">
+                                <div class="table-title-operation">
+                                    <div class="table-title-on-the-right">
+                                        <span>שורה</span>
+                                        <span id="knockoutTable_outerDtable" name="knockoutTable_outerDtable" data-bind="text: $index() + 1"></span>
+
+                                    </div>
+                                    <span class="btnOpenClose btn-blue noPrint"
+                                          data-bind="click: isOpenContent.bind($data, !isOpenContent()),tlpLock:false">
+                                        <span class="openRow">
+                                            <span data-bind="visible: isOpenContent()">&nbsp;-</span>
+                                            <span class="plus" data-bind="visible: !isOpenContent()" style="display: none;">+</span>
+                                        </span>
+                                        <span data-bind="click:isOpenContent == !isOpenContent,visible: isOpenContent(),bindText:'collapseRow'"></span>
+                                        <span data-bind="click:isOpenContent == !isOpenContent,visible: !isOpenContent(),bindText:'expandRow'"></span>
+                                    </span>
+                                    <div class="table-title-on-the-left">
+                                        <span class="delete-line-label">
+                                            <input type="button" id="del-img-outerDtable" class="del-img noPrint" data-tofocus tfsbackgroundurl="del_small.gif"
+                                                   title="מחק שורה" data-bind="removeRow: $parent.contactListHybrid, args: { tableId: 'outerDtable' }" />
+                                            <span data-bind="removeRow: $parent.contactListHybrid, args: { tableId: 'outerDtable' }">מחק שורה</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" tfsinclude="FormParts/Containers/DontShowInOrder.html" data-bind="visible:!isOpenContent()"></div>
+                    <div class="row" data-bind="collapseExpandRow:isOpenContent, table: $parent.contactListHybrid">
+                        <div class="col-md-4" id="viewElement">
+                            <label data-for="contactIdentityType">סוג</label>
+                            <select id="contactIdentityType" tfsrowdata
+                                    data-bind="value: type, options: $parent.typeList,optionsText:'dataText',optionsValue:'dataCode',optionsCaption:'בחר', accessibility: {}"></select>
+                        </div>
+                        <div class="col-md-4" id="unViewElement">
+                            <label data-for="contactIdentityNumber">מספר זיהוי (חובה עם תנאי)</label>
+                            <input id="contactIdentityNumber"
+                                   class="tfsInputText"
+                                   tfsrowdata
+                                   data-bind="value: identityNumber, accessibility: {}, validationCore:$parent.contactListHybrid">
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="date">
+                                <label data-for="migrationDate"> תאריך הגירה (מוקדם מהיום)</label>
+                                <input class="tfsInputDate"
+                                       id="migrationDate"
+                                       tfsrowdata
+                                       title="בחר תאריך מתאריכון"
+                                       tfsdatatype="date"
+                                       data-bind="value:migrationDate, accessibility: {}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row section-sub-title">
+                        <span class="content">תפקידים</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-row">
+        <input type="button" id="addHybridRow" class="btn btn-white btn-add noPrint"
+               title="הוסף שורה" value="+ הוסף שורה"
+               data-bind="addRow:contactListHybrid" id="btnAddContact" />
+
+    </div>
+</div>
+
+<div class="row">טבלה דינאמית</div>
+<div class="row">
+    <div class="dtable col-md-12">
+        <table id="outerDtable" class="table" tfsdata tfsstaticrows=true>
+            <thead></thead>
+            <tbody data-bind="foreach: contactListDynmic">
+                <tr>
+                    <td>
+                        <div class="row title">
+                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-row">
+            <input type="button" id="addDynmicRow" class="btn btn-white btn-add noPrint"
+                   title="הוסף שורה" value="+ הוסף שורה"
+                   data-bind="addRow:contactListDynmic" id="btnAddContact" />
+
+        </div>
+    </div>
+</div>

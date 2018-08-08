@@ -1,0 +1,22 @@
+﻿<div id="EmailContainer">
+    <div class="row">
+        <div class="col-md-8">
+            <label for="Email">
+                <span data-bind="text: labels().email"></span>
+            </label>
+            <input class="tfsInputText"
+                   id="Email"
+                   tfsdata data-bind="value:email" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <label for="ReEmail">
+                <span data-bind="text: labels().reEmail"></span>
+            </label>
+            <input class="tfsInputText"
+                   id="ReEmail"
+                   tfsdata data-bind="event: { paste: pasted  }, value:reEmail" />
+        </div>
+    </div>
+</div>

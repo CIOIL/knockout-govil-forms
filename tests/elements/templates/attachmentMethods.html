@@ -1,0 +1,73 @@
+﻿<span id="GenezralAttributes" formsigntime="SupportAgforms2HtmlDisplay" tfsenabledbuttons="saveaspdf" tfslanguage="hebrew" tfsappmode="release" tfsmaxattachmentfilesize="" tfshiddenbuttons="lock;submit;displaysign;attachment;showattachments;embeded;reset;submit;index;options;encrypt" tfsrequirederrordisplay="Border:red" tfsallowedattachmentextensions="" tfsmailserver="http://xxx.xxx.xx" tfssubmitactionparam="action:postForm;url:https://xxx.xxx.xx;ActionOnreturn:function{callback}" tfssubmitaction="submitByHTTP" tfsformid="xxx.xxx.xx" tfsformname="בקשה לדרכון / תעודת מעבר &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;© כל הזכויות שמורות מדינת ישראל שרות הטפסים " tfstest="key1:value1;key2:value2" tfsversion="0.9.2.88" tfspluginversion="3.2.0.0" tfsprintsetup="rightmargin:0.5;leftmargin:0;bottommargin:0;topmargin:30;CheckFormIntegrityBeforePrint:true;PrintBackgroundImage:true" tfsdisableversionalert="True" tfsrequiredmark="" tfsuimode=""></span>
+<div class="col-md-4">
+    <label>attachmentLabel</label>
+    <div class="attachment-wrapper">
+        <div class="attachment-inner">
+            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="לחץ להוספת קובץ" href="http://xxx/AGFormSite/#">
+                <input tabindex="-1" onfocus="$(this).parent().find(':file').click()" id="attachment" class="tfsInputText" style="DIRECTION: rtl" tfsextensions="*.gif;*.bmp" placeholder="לחץ להוספת קובץ" tfsname="מסמכים בכרטיסית אנשי קשר" tfsdatatype="attachment" tfsdata="" tfsuploaded="false">
+                <img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+            </a>
+        </div>
+        <input onchange="AgatAttachment.handleChange(this);" id="_form_attachment" class="attachment" oncontextmenu="return false;" type="file">
+    </div>
+</div>
+<div class="col-md-4">
+    <label>attachmentLabel</label>
+    <span>tooltip</span>
+    <div class="attachment-wrapper">
+        <div class="attachment-inner">
+            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="לחץ להוספת קובץ" href="http://xxx/AGFormSite/#">
+                <input tabindex="-1" onfocus="$(this).parent().find(':file').click()" id="attachmentTooltip" class="tfsInputText" style="DIRECTION: rtl" tfsextensions="*.gif;*.bmp" placeholder="לחץ להוספת קובץ" tfsname="מסמכים בכרטיסית אנשי קשר" tfsdatatype="attachment" tfsdata="" tfsuploaded="false">
+                <img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+            </a>
+        </div>
+        <input onchange="AgatAttachment.handleChange(this);" id="_form_attachmentTooltip" class="attachment" oncontextmenu="return false;" type="file">
+    </div>
+</div>
+<div class="col-md-4">
+    <input id="regularInput" class="tfsInputText">
+</div>
+<div>
+    <table id="tableOfAttachmentInTable" tfsdata="" tfsstaticrows="true">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="attachment-wrapper">
+                        <div class="attachment-inner">
+                            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="לחץ להוספת קובץ" href="http://xxx/AGFormSite/#">
+                                <input tabindex="-1" onfocus="$(this).parent().find(':file').click()" id="attachmentInTable" class="tfsInputText" style="DIRECTION: rtl" placeholder="לחץ להוספת קובץ" tfsname="מסמכים בכרטיסית אנשי קשר" tfsdatatype="attachment" tfsrowdata="" tfsuploaded="false"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+                            </a>
+                        </div>
+                        <input onchange="AgatAttachment.handleChange(this);" id="_form_attachmentInTable" class="attachment" oncontextmenu="return false;" type="file">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="attachmentsTable" tfsdata="" tfsstaticrows="true">
+        <tbody>
+            <tr>
+                <td>
+                    <div>
+                        <label>
+                            <div class="attachment-wrapper">
+                                <div class="attachment-inner"><a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://localhost/AGFormSite/#"><input tabindex="-1" onfocus="$(this).parent().find(':file').click()" id="tableAttachment1" class="tfsInputText" style="DIRECTION: rtl" placeholder="בחר קובץ" tfsdatatype="attachment" tfsrowdata="" tfsuploaded="false"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif"></a></div><input onchange="AgatAttachment.handleChange(this);" id="_form_tableAttachment1" class="attachment" oncontextmenu="return false;" type="file">
+                            </div>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label>
+                            <div class="attachment-wrapper">
+                                <div class="attachment-inner"><a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ" href="http://localhost/AGFormSite/#"><input tabindex="-1" onfocus="$(this).parent().find(':file').click()" id="tableAttachment2" class="tfsInputText" style="DIRECTION: rtl" placeholder="בחר קובץ" tfsdatatype="attachment" tfsrowdata="" tfsuploaded="false"><img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif"></a></div><input onchange="AgatAttachment.handleChange(this);" id="_form_tableAttachment2" class="attachment" oncontextmenu="return false;" type="file">
+                            </div>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

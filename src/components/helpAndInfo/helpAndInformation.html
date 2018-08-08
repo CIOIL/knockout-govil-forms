@@ -1,0 +1,38 @@
+﻿<div class="help-startup-page" data-bind="css:{'opened': helpAndInformation.isInformationMenueOpen}, visible: helpAndInformation.isInformationMenueOpen">
+    <div data-bind="with: helpAndInformation" class="help-menu-content">
+
+        <ul class="help-and-info-list">
+
+            <li>
+                <div class="list-title help-icon">
+                    <div><i class="ic-help btn-help-close cursor-pointer"></i><span class="btn-help-close cursor-pointer" data-bind="text: labels().title"></span></div>
+                </div>
+
+            </li>
+
+            <!-- ko if: officeInformation -->
+            <li class="office-details content-details">
+                <div data-bind="component: officeInformation"></div>
+            </li>
+            <!-- /ko -->
+
+            <li class="content-details"><div tfsinclude="CDN/builder/src/components/support/support.html" data-bind="with:support"></div></li>
+
+            <li class="content-details">
+                <div data-bind="component: instructions"></div>
+            </li>
+
+            <!-- ko if: additionalInformation -->
+            <li class="content-details additional-information">
+                <div data-bind="component: additionalInformation"></div>
+            </li>
+            <!-- /ko -->
+
+            <li> <div tfsinclude="CDN/builder/src/components/FormInformation/FormInformationGovForms.html" data-bind="with:formInformation"></div></li>
+        </ul>
+    </div>
+</div>
+
+<template id="baseInstructions">
+    <div tfsinclude="CDN/builder/src/components/helpAndInfo/instructions.html"></div>
+</template>

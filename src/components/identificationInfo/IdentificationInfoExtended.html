@@ -1,0 +1,41 @@
+﻿<div class="row">
+    <div class="col-md-12 required-wrapper" data-bind="requiredWrapper: idType">
+        <label data-for="[#idType]" id="[#idType]RadiogroupTitle"><span data-bind="text: labels().idType"></span></label>
+        <div class="radio " role="radiogroup" aria-labelledby="[#idType]RadiogroupTitle">
+            <div class="inline-element">
+                <input class="tfsInputradio" id="[#idType]1" role="radio"
+                       type="radio" name="[#idType]" value="1" data-bind="radioGroupAccessibility: idType, checked: idType,  tlpLockElement: isEnabledIdType" tfsdata />
+                <label for="[#idType]1" class="label-radio-combined">
+                    <span data-bind="text: labels().idType1"></span>
+                </label>
+            </div>
+            <div class="inline-element">
+                <input class="tfsInputradio" id="[#idType]2" role="radio"
+                       type="radio" name="[#idType]" value="2" data-bind="radioGroupAccessibility: idType, checked: idType,  tlpLockElement: isEnabledIdType" tfsdata />
+                <label for="[#idType]2" class="label-radio-combined">
+                    <span data-bind="text: labels().idType2"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <label for="[#idNum]"><span data-bind="text: labels().idNum"></span></label>
+        <input class="tfsInputText"
+               id="[#idNum]" data-bind="value: idNum, tlpLockElement: !isEnabledIdNum()"
+               dir="ltr" tfsdata/>
+    </div>
+    <div class="col-md-4">
+        <label for="[#LastName]"><span data-bind="text: labels().lastName"></span></label>
+        <input class="tfsInputText"
+               id="[#LastName]"
+               data-bind="value: lastName, tlpLockElement: !isEnabledLastName()" tfsdata />
+    </div>
+    <div class="col-md-4">
+        <label for="[#FirstName]"><span data-bind="text: labels().firstName"></span></label>
+        <input class="tfsInputText"
+               id="[#FirstName]"
+               data-bind="value: firstName, tlpLockElement: !isEnabledFirstName()" tfsdata />
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿<div class="noPrint">
+    <div class="row buttons">
+        <input type="button" id="prevTab"
+               data-bind="visible: !isFirst() && isTabsMode(), moveToContainer: getPrevContainer(), attr:{ value: labels().prevStep }"
+               class="btn btn-white float-right" />
+        <input type="button" id="nextTab"
+               data-bind="visible: isShowNextButton,  moveToContainer: getNextContainer(), value: labels().nextStep "
+               class="btn btn-blue float-left" />
+        <span class="act-row-buttons">
+            <span data-bind="visible: isShowPrintButton()" class="btn-print-holder">
+                <button tfsaction="print" data-bind="attr: { value: labels().print, title: labels().printButtonTitle }"
+                        class="btn btn-white">
+                    <i class="ic-print" aria-hidden="true"></i><span class="text" data-bind="text: labels().print"></span>
+                </button>
+            </span>
+            <span data-bind="visible: isShowSendButton()" class="btn-submit-holder">
+                <button id="sendBtn" class="btn btn-blue" data-bind="attr: { value: labels().send, title: labels().sendButtonTitle }" tfsaction="submit">
+                    <i class="ic-send" aria-hidden="true"></i><span class="text" data-bind="text: labels().send"></span>
+                </button>
+            </span>
+        </span>
+    </div>
+</div>
+

@@ -1,0 +1,32 @@
+﻿
+<div class="row">
+    <div class="col-md-4 required-wrapper" data-bind="requiredWrapper: yesNo">
+        <label for="[#radioName]">[#titleText]</label>
+        <div class="radio">
+
+            <span>
+                <input class="tfsInputradio" id="[#radioName]1"
+                       data-bind="checked: yesNo, tlpLock : isRadioDisabled"
+                       type="radio" name="[#radioName]" value="1" tfsdata />
+                <label for="[#radioName]1" class="label-radio-combined">
+                    <span data-bind="text: labels().yes"></span>
+                </label>
+            </span>
+
+            <span>
+                <input class="tfsInputradio" id="[#radioName]2"
+                       data-bind="checked: yesNo, tlpLock : isRadioDisabled "
+                       type="radio" name="[#radioName]" value="2" tfsdata />
+                <label for="[#radioName]2" class="label-radio-combined">
+                    <span data-bind="text: labels().no"></span>
+                </label>
+            </span>
+
+
+        </div>
+    </div>
+    </div>
+<div id="x" tfsinclude="CDN/builder/src/components/payments/Formparts/PayerDetails.html"></div>
+
+    
+   

@@ -1,0 +1,41 @@
+﻿<div class="fill-container required-wrapper" data-bind="requiredWrapper: id">
+    <div class="BoundaryLine"></div>
+    <span class="blue" data-bind="text: title()"></span>
+    <span data-bind="visible:isNotIdentify"><br /></span>
+    <span class="blue" data-bind="text: labels().title1, visible:isNotIdentify"></span>
+    <br />
+    <div class="col-md-12" data-bind="visible: isVisible"> 
+        <br />
+        <div class="row" data-bind="visible:isLoadingCertificate">
+            <span class="loadingMessage noPrint" data-bind="visible:isLoadingCertificate,visibleLoader:isLoadingCertificate"><span data-bind="text:labels().loadData" class="blue"></span></span>
+        </div>
+        <div class="row" data-bind="visible: isIdentify">
+            <div class="col-md-12">
+                <div class="blue">
+                    <span data-bind="text: labels().name"></span> &nbsp;
+                    <span id="[#name]" tfsdata data-bind="text:name"></span>
+                </div>
+                <div class="blue">
+                    <span data-bind="text: labels().id"></span>&nbsp;
+                    <span id="[#id]" tfsdata class="blue" data-bind="text:id"></span>
+                </div>
+                <div class="blue">
+                    <span data-bind="text: labels().date"></span>&nbsp;
+                    <span id="[#date]" tfsdataclass="blue" data-bind="text:date"></span>
+                </div>
+                <div class="blue">
+                    <span data-bind="text: labels().expirationDate"></span>&nbsp;
+                    <span id="[#expirationDate]" tfsdata class="blue" data-bind="text:expirationDate"></span>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <br />
+    <button class="btn btn-blue" id="identification" data-bind="click: getAuthentication, visible: showButton" value="הזדהות">
+        <span class="text" data-bind="text:labels().isIdentificationButton"></span>
+    </button>
+    <br />
+    <br />
+    <div class="BoundaryLine"></div>
+</div>

@@ -1,0 +1,20 @@
+﻿<div id="[#containerId]" class="split-date" data-bind="validationElement:dateForValidation" style="">
+    <label>
+        <span class="ui-asteria" data-bind="visible: isRequired">*</span>
+        <span data-bind="text: title"></span>
+    </label>
+    <div data-bind="with: year" class="col-md-4">
+        <div tfsinclude="CDN\builder\src\components\date\FormParts\DatePart.html" tfstexttoreplace="{partId:[#yearId]}"></div>
+    </div>
+    <div data-bind="with: month" class="col-md-4">
+        <div tfsinclude="CDN\builder\src\components\date\FormParts\DatePart.html" tfstexttoreplace="{partId:[#monthId]}"></div>
+
+    </div>
+    <div data-bind="with: day" class="col-md-4">
+        <div tfsinclude="CDN\builder\src\components\date\FormParts\DatePart.html" tfstexttoreplace="{partId:[#dayId]}"></div>
+
+    </div>
+
+</div>
+<span class="validationMessage" aria-live="assertive" id="vmsg_[#containerId]" data-bind="validationMessage: dateForValidation"></span>
+

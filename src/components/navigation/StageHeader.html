@@ -1,0 +1,39 @@
+﻿<!--Start stage-header title-->
+
+<div class="content-section-title" data-bind="moveToContainer: $data,handleTabInDrawMode: $data, attr: { 'disabled': isDisabled()}">
+    <div class="right-step-status noPrint">
+        <div class="plus-minus-sign">
+            <i class="open-close-icon noPrint" name="openClose" aria-label="מזער"></i>
+        </div>
+        <!--End-open-close-div-->
+    </div>
+    <div class="section-title">
+        <span role="heading" aria-level="2" data-bind="text:getIndex()+1+'.'"></span>
+        <span role="heading" aria-level="2" data-bind="html:longTitle"></span>
+
+        <span class="accessibility-title noPrint" role="heading" aria-level="2" data-bind="text:labels().requiredMarkup"></span>
+    </div>
+
+    <!--Start-open-close-div-->
+    <!--arrow back and  forward in mobile-->
+    <div class="arow-nav-wrap">
+        <i class="arrow ic-right noPrint" data-bind="visible: !containersViewModel.isFirst(),moveToContainer: containersViewModel.getPrevContainer(), clickBubble: false"></i> <!--css:{'ic-right': isRtl , 'ic-left': isLtr},-->
+        <i class="arrow ic-left noPrint" data-bind="visible: !containersViewModel.isLast(),  moveToContainer:containersViewModel.getNextContainer(), clickBubble: false"></i> <!--css:{'ic-right':  isLtr, 'ic-left': isRtl},-->
+    </div>
+
+    <!--Start-step-status-->
+    <div class="left-step-status noPrint">
+        <div class="step-status" data-bind="visible: isStateCompleted()">
+            <span class="text" data-bind="text: labels().completeState"></span>
+            <span class="icon-step"><i class="ic-v" aria-hidden="true"></i></span>
+        </div>
+        <div class="step-status" data-bind="visible: isStateInvalid()">
+            <span class="text" data-bind="text: labels().invalidState"></span>
+            <span class="icon-step attention"><i class="ic-attention" aria-hidden="true"></i></span>
+        </div>
+    </div>
+    <!--End-step-status-->
+</div>
+
+
+

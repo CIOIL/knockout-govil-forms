@@ -1,0 +1,15 @@
+﻿<ul class="tabs-navigation" role="tablist" aria-orientation="horizontal"
+    data-bind="foreach: containersList">
+    <li class="item">
+        <a href="#" alt="" role="tab" data-bind="moveToContainer: $data,activateTab:isCurrentContainer, css:{'active-tab': isCurrentContainer}, attr: { 'disabled': !$parent.isEnabled($data),'aria-selected':isCurrentContainer,'aria-controls':'tabpanel_' + name() }">
+            <span class="stage-status">
+                <div class="step-status hideonload">
+                    <span class="icon-step" data-bind="visible: isStateCompleted()"><i class="ic-v" aria-hidden="true"></i></span>
+                    <span class="icon-step attention" data-bind="visible: isStateInvalid()"><i class="ic-attention" aria-hidden="true"></i></span>
+                </div>
+            </span>
+            <span class="num" data-bind="text: $index()+1"></span><span class="title" data-bind="text: labels().title "></span>
+        </a>
+    </li>
+</ul>
+

@@ -1,0 +1,135 @@
+/*
+    Form unique css
+*/
+.table-title-on-the-right{
+   width:15% !important;
+}
+
+.closeAllRows {
+    height: 50px !important;
+    font-size: 15px !important;
+    background-color: #CDE2EE !important;
+    border: solid 1px #3d759a;
+}
+
+.openAll {
+    width: 49.5% !Important;
+    font-size: 15px;
+}
+
+.closeAll {
+    width: 49.5% !Important;
+    float: left;
+    font-size: 15px;
+}
+
+.btn-blue:hover {
+    color: #fff;
+}
+
+.btnOpenClose {
+    float:right;
+    padding: 4px 10px !important;
+}
+
+.plus,.minus{
+    margin-right: 5px;
+}
+
+ .ltr .btnOpenClose {
+    float:left;
+    padding: 4px 10px !important;
+}
+
+.btn-blue {
+    background-color: #3d759a;
+    border-color: #a5a5a5;
+    color: #fff;
+}
+
+.openRow {
+    border: 1px solid white;
+    color: white;
+    border-radius: 15px !important;
+    margin: 5px !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    font-size: 16px;
+}
+
+.unshown-element{
+    display:none;
+}
+
+.span-field{
+    border: none;
+    display: block;
+    background: transparent;
+    border: none !important;
+    text-align: right !important;
+    background:#e4f1f9 !important;
+    -webkit-appearance: initial;
+}
+
+.inline-div{
+    display:inline;
+}
+
+.shown-element,
+.shown-element .hide.date-field {
+     display: inline !important;
+     font-size: inherit;
+     height: inherit;
+}
+
+.shown-element label{
+    font-weight:bold !important;
+    display: block !important;
+}
+.shown-element.has-description{
+    border-bottom:none !important;
+}
+.shown-element .validationMessage,
+.shown-element .tfsCalendar,
+.shown-element .datepicker-button,
+.shown-element .hasDatepicker,
+.shown-element .lookup-arrow,
+.shown-element .autocomplete-arrow,
+.shown-element .tooltip-help,
+.shown-element .attachment-wrapper img{
+    display:none;
+}
+
+.shown-element  input::-webkit-input-placeholder { color:transparent; }
+.shown-element  input:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.shown-element  input::-moz-placeholder { color:transparent; } /* FF 19+ */
+.shown-element  input:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.shown-element textarea{
+    overflow: hidden;
+} 
+
+.shown-element .required::before {
+    content: "" !important;
+}
+
+.mobile-ui .shown-element {
+    display: block !important;
+}
+
+.mobile-ui .closeAllRows.btn{
+    padding: 0px; 
+    margin-left: 0px; 
+    margin-right: 0px; 
+}
+
+.mobile-ui .table-title-on-the-right {
+    width: 20% !important;
+}
+.mobile-ui .table-title-on-the-left{
+    width: 40% !important;
+}
+/*.mobile-ui .btnOpenClose {
+    float:left; 
+}*/
+

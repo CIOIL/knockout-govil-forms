@@ -1,0 +1,7 @@
+﻿<div class="sub-header">
+    <div tfsinclude="CDN/builder/src/components/toolbar/govFormsToolbar.html"></div>
+    <!--from title-->
+    <div  data-bind="css: {'hide-in-mobile': govFormsToolbar.isActionsMenueOpen, 'hide': helpAndInformation.isInformationMenueOpen}, with: subTitle" tfsinclude="CDN/builder/src/components/subTitle/SubTitleGovForms.html"></div>
+    <!--tabs view-->
+    <div id="tabs" class="tabs-navigation-holder noPrint" data-bind="css: {'hide-in-mobile': govFormsToolbar.isActionsMenueOpen, 'hide': helpAndInformation.isInformationMenueOpen}, with: containersViewModel" tfsinclude="CDN/builder/src/components/navigation/tabsHeaderGovForms.html"></div>
+</div>

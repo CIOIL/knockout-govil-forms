@@ -1,0 +1,85 @@
+﻿
+<div class="row" data-bind="with:dataModel">
+    <div class="col-md-4 required-wrapper">
+        <label>radio</label>
+        <div class="radio">
+            <input name="formtype" class="tfsInputradio" id="pform" type="radio" value="1" tfsdata="" data-bind="checked: radio">
+            <input name="formtype" class="tfsInputradio" id="zform" type="radio" value="2" tfsdata="" data-bind="checked: radio">
+        </div>
+    </div>
+    <div class="col-md-2">
+        <label>text</label>
+        <input class="tfsInputText"
+                id="firstfull1_1" tfsdata=""
+                data-bind="value:firstFull1" />
+        <span id="text1" tfsdata data-bind="text:text1"></span>
+    </div>
+    <div class="col-md-2">
+        <label>text</label>
+        <input class="tfsInputText"
+                id="firstfull1_1" tfsdata=""
+                data-bind="value:firstFull1" />
+    </div>
+
+    <div class="col-md-4">
+        <div class="select">
+            <label>lookup</label>
+            <select class="tfsInputCombo" id="pickUp_street" style="DISPLAY: none" tfsdatatype="LookUpWindow" placeholder="בחר רחוב" tfsselect=""></select>
+            <input class="tfsInputCombo lookup-input lookup-input-override" id="street" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" type="text" tfsdata="" data-bind="tlpLookUp:{ value: lookUp}" placeholder="" tfsvalue="6591" tfsshowdropdownbtn="false" tfslookupwindow="" data-role="none" title="">
+            <input class="lookup-arrow lookup-arrow-override" id="arrow_street" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+            <button class="lookup-arrow lookup-arrow-override" id="arrow_street" onclick="showLookUpWindow(this)" type="button" tfsshowdropdownbtn="false">
+                <i class="ic-lookup-arrow"></i>
+            </button>
+        </div>
+    </div>
+    <div class="checkBox">
+        <input class="tfsInputcheckBox" id="signf" type="checkbox" tfsdata="" aria-labelledby="sign863718" data-bind="checked: checkBoxFalse">
+        <label><span>checkBox</span></label>
+    </div>
+    <div class="col-md-4">
+        <label class="required">attachment</label>
+        <div class="attachment-wrapper">
+            <div class="attachment-inner"><a title="לחץ להוספת קובץ" onclick="return (AgatAttachment.openFileDialog(this, event));" href="#"><input tabindex="-1" class="tfsInputText" id="fileidprint" style="DIRECTION: rtl" tfsdata="" data-bind="value:attachment" tfsdatatype="attachment" placeholder="שם קובץ: 1 - Copy.jpg" tfsuploaded="true" tfsaction="displayAttachment" title="שם קובץ: 1 - Copy.jpg"><img title="שם קובץ: 1 - Copy.jpg" alt="הוסף צרופה" tfssrc="attachEmpty.gif" tfsaction="addAttachment"></a></div><input class="attachment" id="_form_fileidprint" onchange="AgatAttachment.handleChange(this);" oncontextmenu="return false;" type="file" title="שם קובץ: 1 - Copy.jpg" _title="בחר קובץ" readonly="readonly">
+        </div>
+    </div>
+        
+</div>
+
+<div class="row" data-bind="with:listDataModel">
+    <div class="col-md-12 dtable">
+        <table class="table" id="listdatamodel" tfsrowdata="" tfsstaticrows="true">
+            <thead></thead>
+            <tbody data-bind="foreach: list" tfsstaticrows="true">
+                <tr>
+                    <td>
+                        <div class="row">
+
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div class="row" data-bind="with:nestedListDataModel">
+        <table class="table" id="outerlist" tfsdata="" tfsstaticrows="true">
+            <tbody data-bind="foreach: outerList" tfsstaticrows="true">
+                <tr>
+                    <td>
+                        <table class="table" id="innerlist" tfsrowdata="" tfsstaticrows="true">
+                                        
+                            <tbody data-bind="foreach: list" tfsstaticrows="true">
+                                            
+                            </tbody>
+                        </table>
+                                
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+
+

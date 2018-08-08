@@ -1,0 +1,17 @@
+﻿<div class="toolbar" role="toolbar" data-bind="with: govFormsToolbar">
+    <div class="inner-wrapper">
+        <!--toolbar strip-->
+        <div class="toolbar-operations noPrint" id="gov-forms-toolbar">
+            <div class="menu-operations">
+                <div tfsinclude="CDN/builder/src/components/toolbar/mobileToolbar.html"> </div>
+                <div tfsinclude="CDN/builder/src/components/toolbar/desktopToolbar.html"> </div>
+
+            </div>
+        </div>
+    </div>
+    <span class="toolbar-help" id="_tb_help_info" data-bind="css:{'opened': $root.helpAndInformation.isInformationMenueOpen}, click: function(){toggleInformationMenue()}, attr:{'title': labels().helpAndInfoTitle}">
+        <a class="text-toolbar bg" role="button" accesskey="y" href="javascript:void(null);" data-bind="text: labels().helpAndInfoText "></a>
+        <i class="ic-help" aria-hidden="true"></i>
+        <div class="help-container" data-container=".help-menu-content"></div>
+    </span>
+</div>

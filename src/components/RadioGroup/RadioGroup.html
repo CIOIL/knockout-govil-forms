@@ -1,0 +1,17 @@
+﻿<div class="radio-group" id="RadiogroupContainer" role="radiogroup" data-bind="ariaLabelForContainer: true">
+    <!-- ko foreach: radioArray -->
+    <div class="[#className]" data-bind="attr: { title: dataTitle }">
+        <button role="radio" class="radio-button" data-bind="click: $parent.setSelectedValue, addBindings: optionsBinding, attr:{'aria-label':dataText,'data-toFocus':$parent.isFocus($index),'aria-checked':$parent.getAriaCheckedVal($data)}">
+            <span data-bind="css: { checked: $parent.isSelected($data) }"></span>
+        </button>
+        <span class="radio-label" data-bind="radioLabel:$parent.selectedValue,text: dataText,css:{'radio-label-checked':$parent.isSelected($data) }">
+        </span>
+    </div>
+    <!-- /ko  -->
+    <input class="hide"
+           id=""
+           tfsdata
+           data-bind="value: selectedValue" />
+    <span class="validationMessage" data-bind="validationMessage: selectedValue"></span>
+</div>
+

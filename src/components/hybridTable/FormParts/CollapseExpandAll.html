@@ -1,0 +1,11 @@
+<div class="row withoutPadding noPrint neverLock"
+data-bind="tlpLock:false">
+    <input title="הרחב תצוגת כלל השורות" class="closeAllRows noPrint openAll" 
+           id="openAllrows" type="button" 
+           data-bind="collapseExpandAll: true,table:[#table],bindText:'expandAll'"/> 
+    <input title="צמצם תצוגת כלל השורות" 
+           class="closeAllRows closeAll noPrint" 
+           id="closeAllrows" type="button"
+           data-bind="collapseExpandAll:false,table:[#table],bindText:'collapseAll'"/>
+</div>
+

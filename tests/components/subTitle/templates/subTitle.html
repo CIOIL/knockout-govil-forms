@@ -1,0 +1,16 @@
+﻿<div class="form-main-title">
+    <div class="inner-wrapper">
+
+        <h1 class="title float-right" data-bind="text: labels().formName"></h1>
+
+        <div class="ref-num float-left">
+            <span data-bind="text: labels().referenceNum"></span>:
+                        <span class="TitleLock" id="ReferenceNumber" tfsdata tfsdonotimportbytoolbar data-bind="tlpInitialText: formInformation.referenceNumber"></span>
+        </div>
+        <div class="hide">
+            <span data-bind="text: labels().date"></span>:
+                        <span data-bind="text: formInformation.loadingDate"></span>
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿<div class="help-startup-page" data-bind="css:{'opened': helpAndInformation.isInformationMenueOpen}, visible: helpAndInformation.isInformationMenueOpen">
+    <div data-bind="with: helpAndInformation" class="help-menu-content">
+
+        <ul class="help-and-info-list">
+
+            <li>
+                <div class="list-title help-icon">
+                    <div><i class="ic-help btn-help-close cursor-pointer"></i><span class="btn-help-close cursor-pointer">עזרה ומידע</span></div>
+                </div>
+
+            </li>
+
+            <li data-bind="visible: officeInformation.visible">
+                <div class="list-title">
+                    <div data-bind="text: officeInformation.title"></div>
+                </div>
+            </li>
+
+            <li class="office-information" data-bind="visible: officeInformation.visible">
+                <div class="semel-office semel-on-dsk" alt="office logo" data-bind="attr:{'class': officeInformation.logoClassName}">
+                    <span data-bind="text: officeInformation.officeName"></span>
+                </div>
+                <!-- ko foreach: officeInformation.content -->
+                <p data-bind="text: ko.unwrap(itemText), attr:{'class': classNames}"></p>
+                <!-- /ko -->
+
+            </li>
+            <li><div tfsinclude="CDN/builder/src/components/support/support.html" data-bind="with:support"></div></li>
+            <li>
+                <div class="list-title" tfsindex=""><div data-bind="text:fillFormGuidance.title"></div></div>
+            </li>
+            <li  class="fill-form-guidance">
+                <p class="clarification-instruction" data-bind="visible: fillFormGuidance.visibleClarification, text: labels().clarification"></p>
+                <p class="privacy-protection-instruction" data-bind="visible: fillFormGuidance.visiblePrivacyProtection, text: labels().privacyProtection"></p>
+                <p class="submitForm-instruction" data-bind="visible: fillFormGuidance.visibleSubmitForm, text: labels().submitForm"></p>
+                <p class="noPrint required-field-instruction" data-bind="visible: fillFormGuidance.visibleRequireField">
+                    <span class="ui-asteria" data-bind="text:labels().requireField"></span>
+                </p>
+                <!-- ko foreach: fillFormGuidance.content -->
+                <p data-bind="text: ko.unwrap(itemText), attr:{'class': classNames}"></p>
+                <!-- /ko -->
+            </li>
+            <!-- ko foreach: additionalInformation-->
+            <li>
+                <div class="list-title">
+                    <div data-bind="text: title"></div>
+                </div>
+            </li>
+            <li>
+                <!-- ko foreach: content -->
+                <p data-bind="text: ko.unwrap(itemText), attr:{'class': classNames}"></p>
+                <!-- /ko -->
+            </li>
+            <!-- /ko -->
+            <li> <div tfsinclude="CDN/builder/src/components/FormInformation/FormInformation.html" data-bind="with:formInformation"></div></li>
+        </ul>
+    </div>
+</div>

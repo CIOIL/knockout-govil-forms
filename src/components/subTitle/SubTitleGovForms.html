@@ -1,0 +1,24 @@
+﻿<div class="form-main-title" data-bind="css: {culture: toggleLanguagesButton.isMultiLanguages()}">
+    <div class="inner-wrapper">
+
+
+        <div data-bind="visible:formInformation.filesManager.isMultiFiles()" class="displayAttachmentStatus noPrint">
+            <span data-bind="text: labels().filesSizeLimit"></span>
+            <div>
+                <span data-bind="displayAttachmentStatus:formInformation.filesManager"></span>
+                <i class="icon-attach"></i>
+            </div>
+        </div>
+        <h1 class="title " data-bind="css: {'float-right': !toggleLanguagesButton.isMultiLanguages()}, text: labels().formName"></h1>
+        <div class="ref-num" data-bind="css: {'float-left': !toggleLanguagesButton.isMultiLanguages()}">
+            <span data-bind="text: labels().referenceNum"></span>:
+            <span class="TitleLock" id="ReferenceNumber" data-bind="text: formInformation.referenceNumber"></span>
+        </div>
+        <div class="hide">
+            <span data-bind="text:labels().date"></span>:
+            <span data-bind="text: formInformation.loadingDate"></span>
+        </div>
+
+        <div class="clr"></div>
+    </div>
+</div>

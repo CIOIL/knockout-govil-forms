@@ -1,0 +1,58 @@
+﻿@white: #FFFFFF;
+@black: #000000;
+
+.grid {
+    .search {
+        .text {
+            height: 30px;
+        }
+    }
+
+    table.grid-table {
+        border-collapse: separate;
+
+        thead {
+            tr {
+                th[class*="col-"] {
+                    border-left: 1px solid @black;
+                    border-bottom: 1px solid @black;
+                    border-top: 1px solid @black;
+                    position: static;
+
+                    &:last-child {
+                        border-left: 1px solid @black;
+                    }
+
+                    &:first-child {
+                        border-right: 1px solid @black;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border-left: 1px solid @black;
+                    border-bottom: 1px solid @black;
+
+                    &:first-child {
+                        border-right: 1px solid @black;
+                    }
+
+                    &:last-child {
+                        border-left: 1px solid @black;
+                    }
+                }
+            }
+        }
+    }
+
+    .paging {
+        display: none;
+    }
+
+    &.row {
+        page-break-inside: auto;
+    }
+}

@@ -1,0 +1,32 @@
+﻿<div style="DISPLAY: none">
+    <div class="select">
+        <select id="pickUp_City" class="tfsInputCombo" style="DISPLAY: none" name="City" tfsselect="" tfsdatatype="lookUpWindow"></select>
+        <input onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" id="City" class="tfsInputCombo lookup-input lookup-input-override" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" tfsdata="" tfsname="ישוב" tfsvalue="3000" tfsshowdropdownbtn="false" placeholder="" tfslookupwindow="" data-role="none"><input onclick="showLookUpWindow(this)" id="arrow_City" class="lookup-arrow lookup-arrow-override"  type="button" tfsshowdropdownbtn="false">
+        <button onclick="showLookUpWindow(this)" id="arrow_City" class="lookup-arrow lookup-arrow-override" tfsshowdropdownbtn="false">
+            <i class="ic-lookup-arrow"></i>
+        </button>
+        <span class="validationMessage"></span>
+    </div>
+    <div class="select">
+        <select id="pickUp_Street" class="tfsInputCombo" style="DISPLAY: none" name="Street" tfsselect="" tfsdatatype="LookUpWindow" customattr="meitav">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+        </select>
+        <input onkeyup="AgatLookupWindow.showLookUpWindowFromKey(event, this)" onfocus="" id="Street" class="tfsInputCombo lookup-input lookup-input-override" onkeydown="AgatLookupWindow.showLookUpWindowFromTabKey(event, this)" tfsdata="" tfsname="רחוב" tfsrequired="true" tfsvalue="" tfsshowdropdownbtn="false" placeholder="" tfslookupwindow="" data-role="none" aria-required="true" customattr="meitav" style="display: none; background-color: rgb(255, 255, 255);">
+        <input onclick="showLookUpWindow(this)" id="arrow_Street" class="lookup-arrow lookup-arrow-override"  type="button" tfsshowdropdownbtn="false">
+        <button onclick="showLookUpWindow(this)" id="arrow_Street" class="lookup-arrow lookup-arrow-override" tfsshowdropdownbtn="false" customattr="meitav" style="display: none;">
+            <i class="ic-lookup-arrow"></i>
+        </button>
+    </div>
+    <label for="attach">צרופה</label>
+    <div class="attachment-wrapper">
+        <div class="attachment-inner">
+            <a onclick="return (AgatAttachment.openFileDialog(this, event));" title="בחר קובץ">
+                <input tabindex="-1" id="attach" class="tfsInputText" style="DIRECTION: rtl" tfsdata="" tfsname="צרופה" tfsdatatype="attachment" data-bind="value: attachment, tlpAttachment: attachment" placeholder="בחר קובץ" tfsuploaded="false">
+                <img title="הוסף צרופה" alt="הוסף צרופה" tfsaction="addAttachment" tfssrc="attachEmpty.gif">
+            </a>
+        </div>
+        <input onchange="AgatAttachment.handleChange(this);" id="_form_attach" class="attachment" oncontextmenu="return false;" type="file">
+    </div>
+</div>

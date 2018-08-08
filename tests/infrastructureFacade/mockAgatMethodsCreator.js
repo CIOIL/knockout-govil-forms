@@ -1,0 +1,1 @@
+﻿window.AgatEngine = { setFormLanguage: function () { } }

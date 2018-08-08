@@ -1,0 +1,48 @@
+﻿
+.range .step {
+    background-color:#FFFFFF; 
+    border: 1px solid #b7d3e4;
+    color: #293843;
+    margin: 0 0;
+    padding: 1px 1px;
+    
+	height: 25px;
+    cursor: default;
+    text-decoration:none;
+    float:left;
+    text-align: center;
+    font-weight:normal;
+}
+
+.range .step.checked {
+	background-color: #3d759a;
+    border: 1px solid #b7d3e4;
+    color:#FFFFFF;
+}
+.range .step:disabled{
+    background-color:  #eee;
+}
+
+.range .checked:disabled{
+	background-color:  #3d759a;
+}
+
+.step:hover{
+    background-color:#b7d3e4;
+}
+.required-range{
+    width:100%;
+    height: 28px;
+}
+
+ .pdf .range .step.checked {
+	background-color: #FFFFFF;
+     border: 3px solid #000000;
+}
+
+@media print {
+.range .step.checked {
+	background-color: #FFFFFF;
+     border: 3px solid #000000;
+}
+}

@@ -1,0 +1,76 @@
+﻿<div class="grid row">
+    <div class="col-md-6" tfsinclude="CDN/builder/src/components/Grid/FormParts/Filtering.html" data-bind="with: filtering"></div>
+    
+    <table class="grid-table">
+        <thead>
+            <tr>
+                <th scope="col" class="col-md-1" data-bind="visible: isCheckBoxColumn">
+                    <div class="checkBox">
+                        <input type="checkBox" id="checkAll" class="tfsInputcheckBox check"
+                               data-bind="checked: selectAll, attr:{'aria-checked': selectAll}" />
+                        <label for="checkAll" title="בחר הכל"></label>
+                    </div>
+                </th>
+                <th scope="col" class="col-md-1" data-bind="visible: isRowIndex">
+                    #
+                </th>
+                <!-- ko foreach: columnsInGrid -->
+                <th scope="col" data-bind="css: className">
+                    <div data-bind="click: $parent.sorting.setSortKey">
+                        <span data-bind="text: headerText"></span>
+                        <button class="transparent sort" data-bind="css: $parent.sorting.columnClass($data)"></button>
+                    </div>
+                </th>
+                <!-- /ko  -->
+                <th scope="col" class="col-md-1" data-bind="visible: hasAdditionalDetails">
+                </th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: { data: dataForDisplay, as: 'item' }">
+            <tr data-bind="visible: !item.isRowOpen()">
+                <td class="col-md-1" data-bind="visible: $parent.isCheckBoxColumn">
+                    <div class="checkBox checkbox-group-container" role="group" aria-labelledby="lblSelectedItems">
+                        <input type="checkBox" id="checkox" class="tfsInputcheckBox check" aria-label="בחר"
+                               data-bind="value: item[$parent.keyFieldName], checkbox: $parent.selectedItems, checkboxAccessibility:$parent.selectedItems" aria-checked="false" />
+                        <label id="lblSelectedItems" data-for="checkox" title="בחר"></label>
+                    </div>
+                </td>
+                <td scope="row" id="rowIndex" tabindex="-1" class="col-md-1" data-bind="visible: $parent.isRowIndex">
+                    <span data-bind="text: $parent.paging.getRowIndex($index)"></span>
+                </td>
+                <!-- ko foreach: { data: $parent.columnsInGrid, as: 'column' } -->
+                <td data-bind="css: className">
+                    <span data-bind="text: item[column.dataField]"></span>
+                </td>
+                <!-- /ko  -->
+                <td scope="row" tabindex="-1" class="col-md-1" data-bind="visible: $parent.hasAdditionalDetails" >
+                    <button class="transparent action" data-bind="click:item.openRow">פרטים נוספים</button>
+                </td>
+            </tr>
+            <tr data-bind="visible:item.isRowOpen()">
+                <td data-bind="attr:{ 'colspan': $parent.columnsInGridCount }">
+                            <button class="transparent action" data-bind="click:item.closeRow">הסתר פרטים</button>
+                    <div>
+                        <!-- ko foreach: { data: $parent.visibleColumns, as: 'column' } -->
+                        <div class="col-md-4">
+                            <b><span data-bind="text: column.headerText"></span>:</b>
+                            <span data-bind="text: item[column.dataField]"></span>
+                        </div>
+                        <!-- /ko  -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+       
+    </table>
+
+    <div class="noData" data-bind="visible: noData">
+        <label data-bind="text: textsResource().noDataFound, attr: { title: textsResource().noDataFound }"></label>
+    </div>
+
+    <div class="noPrint" tfsinclude="CDN/builder/src/components/Grid/FormParts/Paging.html" data-bind="with: paging"></div>
+</div>
+
+
+
+

@@ -1,0 +1,35 @@
+﻿
+<style>
+    .pseudoTextArea{
+        width: 100%;
+        padding: 0 5px;
+        border-radius: 3px;
+        border: solid 1px #3d759a;
+        text-rendering: auto;
+        color: initial;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        background-color: white;
+        white-space: pre-wrap;
+        height: auto;
+    }
+</style>
+
+<div id="textAreaDiv" class="col-md-12">
+    <label for="comments">הערות</label>
+    <textarea id="comments"
+              class="tfsInputTextArea"
+              tfsname="הערות בכרטיסית פרטי התיק"
+              rows="3"
+              data-bind="adjustTextArea: comments, value: comments, autoResizeTextarea: comments"></textarea>
+
+    <textarea id="otherComments"
+              class="tfsInputTextArea"
+              tfsname="הערות בכרטיסית פרטי התיק"
+              data-bind="adjustTextArea: otherComments, value: otherComments, autoResizeTextarea: otherComments"></textarea>
+</div>

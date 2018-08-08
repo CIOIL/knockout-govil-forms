@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <div tfstexttoreplace="{CityAutoComplete:[#CityAutoComplete]}"
+             data-bind="with: cityAutoComplete"
+             tfsinclude="CDN/builder/src/components/elements/cityAutoComplete/CityAutoComplete.html"></div>
+    </div>
+    <div class="col-md-4">
+        <div tfstexttoreplace="{StreetAutoComplete:[#StreetAutoComplete]}"
+             data-bind="with: streetAutoComplete"
+             tfsinclude="CDN/builder/src/components/elements/streetAutoComplete/StreetAutoComplete.html"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <label for="[#HouseNum]"><span data-bind="text: labels().houseNum"></span></label>
+        <input class="text-field tfsInputText" data-bind="value: houseNum"
+               id="[#HouseNum]" tfsdata />
+    </div>
+    <div class="col-md-2">
+        <label for="[#AptNum]"><span data-bind="text: labels().aptNum"></span></label>
+        <input class="text-field tfsInputText"
+               data-bind="value: aptNum"
+               id="[#AptNum]" tfsdata />
+    </div>
+
+    <div class="col-md-2">
+        <label for="[#ZipCode]"><span data-bind="text: labels().zipCode"></span></label>
+        <input class="text-field tfsInputText"
+               id="[#ZipCode]" data-bind="value: zipCode"
+               tfsdata />
+    </div>
+
+</div>

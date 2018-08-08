@@ -1,0 +1,10 @@
+﻿.open-close {
+    margin: 5px 5px 5px 5px;
+    border: 1px solid #3d759a;
+    color: #3d759a;
+    border-radius: 15px;
+    padding: 0 3px;
+    font-weight: bold;
+    background-color: white;
+    width: 22px;
+}

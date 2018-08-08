@@ -1,0 +1,70 @@
+﻿
+<div id="divkabala" class="fill-container" data-bind="visible:isPaymentSucceeded">
+    <br />
+    <span class="greenTitle bold"><i class="ic-v"></i>התשלום בוצע בהצלחה!</span><br />
+    אנו מודים לך על התשלום בשירות התשלומים הממשלתי.
+    <br />
+    אנא שמור / שמרי את מספר/י ההודעה.<br /><br />
+    <span class="bold">
+        בתאריך <span id="KabalaDate" tfsdata></span>&nbsp;
+        בשעה <span id="KabalaTime" tfsdata></span>&nbsp;
+        בוצעו התשלומים הבאים באינטרנט:
+    </span>
+
+    <div>
+        <div class="row sub-title">
+            <div class="col-md-12 col-title" role="heading" aria-level="4">
+                <span class="bold">פרטי התשלום: מספר אישור <span id="MisparKabala" data-bind="tlpInitialText: misparKabala" tfsdata></span></span>
+            </div>
+        </div>
+        <div>
+            שם פרטי ומשפחה:
+            <div>
+                <span id="FirstNamePay" data-bind="text: firstName" tfsdata></span>&nbsp;&nbsp;<span id="FamilyNamePay" data-bind="text: familyName" tfsdata></span>
+            </div>
+        </div>
+        <div class="separation"></div>
+        <div>
+            מספר זהות:
+            <div>
+                <span id="KabalaIdNum" tfsdata></span>
+            </div>
+        </div>
+        <div class="separation"></div>
+        <div>
+            סכום התשלום:
+            <div>
+                ₪<span id="KabalaSum" tfsdata></span>
+            </div>
+        </div>
+        <div class="separation"></div>
+        <div>
+            מספר אישור מחברת האשראי/בנק:
+            <div>
+                <span id="KabalaConfirmationNum" tfsdata></span>
+            </div>
+        </div>
+        <div class="separation"></div>
+        <div>
+            סוג התשלום:
+            <div>
+                <span id="KabalaPaymentType" data-bind="tlpInitialText:paymentTypeCode" class="hide" tfsdata></span>
+                <span id="KabalaPaymentTypeText" data-bind="text: paymentTypeText" style="WIDTH: 10%" tfsdata></span>,
+                <span id="KabalaCardType" style="WIDTH: 10%" tfsdata></span>&nbsp;
+                ארבע ספרות אחרונות <span id="KabalaCardLastDigit" style="WIDTH: 10%" tfsdata></span>
+            </div>
+        </div>
+        <br />
+        <div>
+            <span class="bold">סה"כ שולם:</span>
+            <div>
+                <span id="KabalaTotal" class="bold" tfsdata></span>&nbsp;<span class="bold">₪</span>
+            </div>
+            <div>
+                <span id="KabalaTotalInWords" tfsdata></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+

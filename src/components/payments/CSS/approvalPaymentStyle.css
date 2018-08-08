@@ -1,0 +1,14 @@
+﻿.greenTitle {
+  font-size: x-large;
+  color: forestgreen;
+}
+.separation {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px;
+  border-top: 1px solid #eeeeee;
+}
+.bold {
+  font-weight: bold;
+}
+/*# sourceMappingURL=ApprovalPaymentStyle.css.map */

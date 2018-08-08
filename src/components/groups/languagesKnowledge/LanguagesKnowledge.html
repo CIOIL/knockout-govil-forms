@@ -1,0 +1,44 @@
+﻿<div class="row">
+    <!-- ko if:isDynamicLanguage -->
+    <div class="col-md-4">
+        <div class="select">
+            <label for="[#SelectedLanguage]"><span data-bind="text: labels().selectedLanguage"></span></label>
+            <select id="[#SelectedLanguage]"
+                    tfsdatatype="LookUpWindow" class="tfsInputCombo"
+                    tfsselect tfsdata
+                    data-bind="tlpLookUp:{ value: selectedLanguage,bindOnSelect:{lookupOptions:bindLanguageListSettings.listAccessor}},tlpBindList: bindLanguageListSettings"></select>
+        </div>
+    </div>
+    <!-- /ko -->
+    <!-- ko if:isPresetLanguage -->
+    <div class="col-md-4" data-bind="tlpLock:true">
+        <label for="[#Language]">
+            <span data-bind="text: labels().language"></span>
+        </label>
+        <input id="[#Language]" class="tfsInputText" tfsdata data-unique="true"
+               data-bind="value: language,text: labels().languageName">
+    </div>
+    <!-- /ko -->
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <label for="[#Speaking]">
+            <span data-bind="text: labels().speaking"></span>
+        </label>
+        <select id="[#Speaking]" tfsdata data-bind="tlpLock:isRatingNotRequired(), tlpSelect:{selectedObject:speaking, options:labels().levelLanguageList}"></select>
+    </div>
+    <div class="col-md-4">
+        <label for="[#Reading]">
+            <span data-bind="text: labels().reading"></span>
+        </label>
+        <select id="[#Reading]" tfsdata data-bind="tlpLock:isRatingNotRequired(), tlpSelect:{selectedObject:reading, options:labels().levelLanguageList}"></select>
+    </div>
+    <div class="col-md-4">
+        <label for="[#Writing]">
+            <span data-bind="text: labels().writing"></span>
+        </label>
+        <select id="[#Writing]" tfsdata 
+                data-bind="tlpLock:isRatingNotRequired(), tlpSelect:{selectedObject:writing, options:labels().levelLanguageList}"></select>
+    </div>
+
+</div>

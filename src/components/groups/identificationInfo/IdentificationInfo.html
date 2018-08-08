@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <label for="[#IdNum]"><span data-bind="text: labels().idNum"></span></label>
+        <input class="tfsInputText"
+               id="[#IdNum]"
+               data-bind="value: idNum, tlpLockElement: !isEnabledIdNum()"
+               dir="ltr"
+               tfsdata />
+    </div>
+    <div class="col-md-4">
+        <label for="[#LastName]"><span data-bind="text: labels().lastName"></span></label>
+        <input class="tfsInputText"
+               id="[#LastName]" data-bind="value: lastName, tlpLockElement: !isEnabledLastName()" tfsdata />
+    </div>
+    <div class="col-md-4">
+        <label for="[#FirstName]"><span data-bind="text: labels().firstName"></span></label>
+        <input class="tfsInputText"
+               id="[#FirstName]"
+               data-bind="value: firstName, tlpLockElement: !isEnabledFirstName()" tfsdata />
+    </div>
+</div>

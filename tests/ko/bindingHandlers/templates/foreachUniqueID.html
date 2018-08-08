@@ -1,0 +1,28 @@
+﻿<div class="dtable col-md-12">
+	<table id="outerDtable" class="table">
+		<thead></thead>
+		<tbody id="contactsTable" data-bind="foreachUniqueID: contactsList">
+			<tr>
+				<td>
+					<div class="row">
+						<div class="col-md-4">
+							<input class="without-id text-field"  />
+
+						</div>
+						<div class="col-md-4">
+							<label for="dynamicText">שדה טקסט בטבלה דינאמית</label>
+							<input id="dynamicText" class="with-id text-field" data-bind="value: dynamicText" />
+						</div>
+						<div class="col-md-4">
+							<div class="date">
+								<label for="dynamicDate"> תאריך בטבלה דינאמית</label>
+								<input class="date-field" id="dynamicDate" data-bind="value: dynamicDate" />
+							</div>
+						</div>
+					</div>
+								
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

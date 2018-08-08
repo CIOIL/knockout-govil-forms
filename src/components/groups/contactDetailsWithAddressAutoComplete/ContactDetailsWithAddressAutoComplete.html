@@ -1,0 +1,25 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <label for="[#Phone]"><span data-bind="text: labels().phone"></span></label>
+        <input class="tfsInputText"
+               data-bind="value: phone"
+               id="[#Phone]" tfsdata />
+    </div>
+    <div class="col-md-4">
+        <label for="[#OtherPhone]"><span data-bind="text: labels().otherPhone"></span></label>
+        <input class="tfsInputText"
+               data-bind="value: otherPhone"
+               id="[#OtherPhone]" tfsdata />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <label for="[#Email]"><span data-bind="text: labels().email"></span></label>
+        <input class="tfsInputText"
+               id="[#Email]" data-bind="value: email"
+               tfsdata />
+    </div>
+</div>
+<div tfstexttoreplace="{City:[#City],Street:[#Street],HouseNum:[#HouseNum],AptNum:[#AptNum],ZipCode:[#ZipCode]}"
+     data-bind="with: address" tfsinclude="CDN/builder/src/components/groups/addressAutoComplete/AddressAutoComplete.html"></div>
+

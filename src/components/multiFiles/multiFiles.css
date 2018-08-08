@@ -1,0 +1,15 @@
+.attach-files {
+    min-height: 100%;
+    width: 850px;
+    overflow: inherit;
+    background: #fff;
+    padding: 142px 0 0 0;
+    font-family: arimo;
+    margin: 0 auto;
+    direction: rtl;
+}
+
+.row+.file-row{
+        background:   #fff;;
+        border-bottom: 3px solid  #285c7e
+}

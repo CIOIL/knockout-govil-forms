@@ -1,0 +1,74 @@
+﻿<div class="toggle-actions-button-wrapper">
+    <div tabindex="0" class="toggle-actions-button" id="_tb_actions" role="button" accesskey="z" data-bind="click: toggleMobileActionsMenue, attr:{'title': labels().actionsTitle}">
+        <i class="ic-menu" aria-hidden="true"></i>
+    </div>
+</div>
+
+<div class="actions-menu">
+    <div class="toolbar-menu" data-bind="css: {'show': isActionsMenueOpen}, style:{width:actionsMenueWidth, height:actionsMenueHeight}">
+        <ul class="toolbar-menu-list">
+            <li class="toolbar-title" data-bind="click: toggleActionsPart">
+                <span data-bind="text:labels().actionsText"></span>
+                <i class="open-arrow"></i>
+            </li>
+            <ul class="wrapper"  data-bind="visible: isActionsPartOpen">
+               <li class="li-menu" data-bind="css:{'visibleOption': isPrintEnable}, visible: isPrintEnable">
+                    <a data-bind="click:function(){toggleMobileActionsMenue(); printForm(); }  ,attr:{'title': labels().printTitle}" class="print " id="_tb_print" role="button" accesskey="p" href="#">
+                        <i class="ic-print" aria-hidden="true"></i>
+                        <span class="bg" data-bind="text: labels().printText"></span>
+                    </a>
+                </li>
+                <li class="li-menu visibleOption" data-bind="visible: isSaveEnable">
+                    <a data-bind="click: function(){toggleMobileActionsMenue();startSaveProcess();},attr:{'title': labels().saveTitle}" class="save " id="_tb_save" role="button" accesskey="s" href="#">
+                        <i class="ic-save" aria-hidden="true"></i>
+                        <span class="bg" data-bind="text: labels().saveText"></span>
+                    </a>
+                </li>
+                <li class="li-menu">
+                    <a data-bind="css:{'visibleOption': isValidateEnable}, visible: isValidateEnable, click: function(){toggleMobileActionsMenue(); validateForm(); },attr:{'title': labels().validateTitle}" class="validate " id="_tb_validate" role="button" accesskey="l" href="#">
+                        <i class="ic-v" aria-hidden="true"></i>
+                        <span class="bg" data-bind="text: labels().validateText"></span>
+                    </a>
+                </li>
+                <li class="li-menu">
+                    <a data-bind="css:{'visibleOption': isSubmitEnable}, visible: isSubmitEnable,click: function(){toggleMobileActionsMenue(); submitForm();} ,attr:{'title': labels().submitTitle}" class="submit   " id="_tb_submit" role="button" accesskey="m" href="#">
+                        <i class="ic-send" aria-hidden="true"></i>
+                        <span class="bg" data-bind="text: labels().submitText"></span>
+                    </a>
+                </li>
+                </ul>
+            <li class="toolbar-title" data-bind="click: toggleViewActionsPart">
+                <span data-bind="text:labels().viewSectionTitle"></span>
+                <i class="open-arrow"></i>
+            </li>
+            <ul class="wrapper" data-bind="visible: isViewActionsPartOpen">
+                <li class="li-menu" data-bind="css:{'visibleOption': isDrawersEnable}, visible: isDrawersEnable">
+                    <a data-bind="click: function(){toggleMobileActionsMenue(); openFullView(); } ,attr:{'title': labels().fullViewTitle}" class="drawers" id="_tb_drawers" role="button" accesskey="r" href="#">
+                        <i class="ic-view-folds" aria-hidden="true"></i>
+                        <span class="bg" data-bind="text: labels().fullViewText"></span>
+                    </a>
+                </li>
+
+                <li class="li-menu" data-bind="css:{'visibleOption': isTabsEnable}, visible: isTabsEnable">
+                    <a data-bind="click: function(){ toggleMobileActionsMenue(); openTabsView(); },attr:{'title': labels().tabsTitle}" class="tabs " id="_tb_tabs" role="button" accesskey="x" href="#">
+                        <i class="ic-view-tabs" aria-hidden="true"></i>
+                        <span class="bg" data-bind="text: labels().tabsText"></span>
+                    </a>
+                </li>
+            </ul>
+            <li class="toolbar-title" data-bind="click: toggleInformationPart">
+                <span data-bind="text:labels().helpAndInfoText"></span>
+                <i class="open-arrow"></i>
+            </li>
+            <ul class="wrapper">
+
+                <li data-bind="css:{'visibleOption':isInformationPartOpen}, visible: isInformationPartOpen"  class="li-menu">
+                    <a role="button" accesskey="y" href="javascript:void(null);" data-bind="click:function(){ toggleMobileActionsMenue(); toggleInformationMenue();}">
+                        <i class="ic-help" aria-hidden="true"></i>
+                        <span class="bg" data-bind="text: labels().helpAndInfoText"></span>
+                    </a>
+                </li>
+              </ul>
+        </ul>
+    </div>
+</div>
