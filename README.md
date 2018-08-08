@@ -25,7 +25,7 @@ Dependencies
 [KOP]:https://github.com/rniemeyer/knockout-postbox
 [KOV]:https://github.com/Knockout-Contrib/Knockout-Validation
 [JQ]:https://jquery.com/
-[ALMND]:(https://github.com/requirejs/almond)
+[ALMND]:https://github.com/requirejs/almond
 [Q]: https://github.com/kriskowal/q 
 [JQUI]:https://jqueryui.com/
 
